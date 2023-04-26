@@ -1,4 +1,6 @@
-NAME:
+INF0:
+
+NAME: BT SmartHub2
 SSID: BT-7XCJMQ
 Admin IP: 192.168.1.254
 Wireless Key:  DA4bHt3enhF4qd
@@ -6,3 +8,18 @@ Hub Admin Key: 34branum
 Serial #+091300+2128006285
 Mac   #709741B3A00
 HELP: btdotcom/help
+
+
+P0R7S:
+
+Broadband
+Phone 
+USB
+WAN
+WAN (Gig Ethernet)
+WAN
+[WAN]
+Power
+WPS Button
+Power Button
+Factory Res Button
