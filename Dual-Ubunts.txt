@@ -1,0 +1,50 @@
+
+###################################
+#### Ubuntu Dual Boot Install #####
+##################################
+
+
+
+<1>
+G-parted wipe some space
+
+
+
+<2>
+Click 'Something else'
+
+
+
+<3> 
+Click '+' 
+or 
+Click '-' then click '+'
+
+
+
+<4>
+25000MB (25G)
+Logical
+Beginning
+Ext4 jornaling
+mountpoint /
+OK!
+
+
+<5>
+Click '+' on freespace again
+Logical
+Beginning
+Swap area (use as)
+OK!
+
+
+
+<6>
+Device for boot loader installation:
+Sda
+INSTALL NOW!
+
+
+//File System : NTFS
+//Version : 20.04
