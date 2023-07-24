@@ -1,0 +1,49 @@
+#########################
+##JTAG/Boundary-scan#####
+#########################
+/
+USE ; 
+> Testing Printed Circuit Boards (PCB).
+
+>Debugging, programming and testing on embedded devices
+
+>Communicates directly with the chips in a board.
+
+>Tests physical connection between pins and chips.
+
+>IEEE 1491.
+
+>Read and Write individual Bits to individual Pins of individual Chips (binary).
+
+>Connects to a device's "Test Machine" via the JTAG's "Test Acess Point".
+
+>Arduino code to Bit-bang interface with JTAG.
+
+
+/
+COMPOSITION;
+/
+Five Pins>>
+
+>TCK > test clock
+>TMS > test mode select
+>TDI > test data in
+>TDO > test data out
+>TRST > test reset
+##
+Presence of ANY of the above connectors makes the board JTAG signal related.
+
+##
+  
+  Compatible with Arduino bitbang and C libraries
+
+>>Look into<<
+#include <arpa.inet.h>
+#include <sys/socket.h>
+#include <sys/wait.h>
+#include <sys/types.h>
+#include <sys/cdefs.h>
+#include <sys/stat.h>
+#include <sys/mman.h>
+#include <sys/syscall.h>
+setsockopt()
