@@ -1,3 +1,5 @@
+$ sc query
+        OUTPUT:
 
 SERVICE_NAME: AdobeARMservice
 DISPLAY_NAME: Adobe Acrobat Update Service
