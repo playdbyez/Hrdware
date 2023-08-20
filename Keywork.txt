@@ -1,2 +1,39 @@
 https://www.win.tue.nl/~aeb/linux/kbd/scancodes.html
 https://tldp.org/HOWTO/pdf/Keyboard-and-Console-HOWTO.pdf
+
+#:::::::::::::: inspect scancodes >> keycodes :::::::::::::::
+#/usr/include/linux/input-event-codes
+#/dev/input/event12
+
+#inspect X11 lib
+#XKeycodeToKeysym
+#usr/include/X11/Xlib.h:1695
+#X11/keysymdef. h
+
+#inspect #include <X11/XKBlib.h>
+#XkbKeycodeToKeysym()
+#xmodmap command
+#XkbKeyAction
+
+# xkeyboard-config
+#/usr/share/X11/xkb
+#/usr/lib/X11/XKeysymDB
+
+# $ xev -event keyboard 
+#reports only keyboard events
+
+#inspect dev/input/event
+#inspect xmodmap
+hutter-kbd
+
+
+To get composed input from an input method, use XmbLookupString or
+XwcLookupString.
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Key processing
+Once the keyboard layout is set up, the process of key handling is relatively simple. A keycode is submitted by the driver. The server checks the keycode and changes modifier state where applicable. It also checks for any actions to be performed on that key. Once that is done, the keycode is sent to the client as a key event.
+
+The client then matches up the keycode and modifier state with the keyboard layout previously obtained from the server and performs some action in response. The server provides modifier state and keycodes, but it is up to the client how it wants to treat that key. It may ignore the modifiers completely or even change the symbols to something completely different.
+
