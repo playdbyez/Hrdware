@@ -1,0 +1,2 @@
+https://www.win.tue.nl/~aeb/linux/kbd/scancodes.html
+https://tldp.org/HOWTO/pdf/Keyboard-and-Console-HOWTO.pdf
