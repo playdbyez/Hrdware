@@ -1,0 +1,186 @@
+Default scancode protcol : Translated Scancode Set 2
+
+Keypress : make
+Keyrelease: break
+
+
+-MAKE-
+Functions by assigining a hex value to a button press
+(pressing ESC = scancode 0x01)
+
+-BREAK-
+Is obtained by adding 0x80/128 to the value of the key pressed
+(releasing ESC = scancode 0x81)
+
+
+
+Three common causes for keyboard error are: 
+(I) several keys pressed simultaneously,
+(II) keyboard buffer overflow, 
+(III) parity error on the serial line used by keyboard and keyboard controller for communication. 
+
+
+
+Protocol Scancodes
+00	Keyboard error - see ff
+aa	BAT (Basic Assurance Test) OK
+ee	Result of echo command
+f1	Some keyboards, as reply to command a4:Password not installed
+fa	Acknowledge from kbd
+fc	BAT error or Mouse transmit error
+fd	Internal failure
+fe	Keyboard fails to ack, please resend
+ff	Keyboard error
+
+
+
+
+
+The Microsoft keyboard
+
+e0 5b (LeftWindow)
+e0 5c (RightWindow)
+e0 5d (Menu)
+
+
+Ordinary Scancodes
+
+01 (Esc)
+02 (1!), 
+03 (2@), 
+04 (3#), 
+05 (4$), 
+06 (5%E), 
+07 (6^), 
+08 (7&), 
+09 (8*), 
+0a (9(), 
+0b (0)), 
+0c (-_), 
+0d (=+), 
+0e (Backspace)
+0f (Tab),
+ 
+10 (Q), 
+11 (W), 
+12 (E), 
+13 (R), 
+14 (T), 
+15 (Y), 
+16 (U), 
+17 (I), 
+18 (O), 
+19 (P), 
+1a ([{), 
+1b (]})
+
+1c (Enter)
+1d (LCtrl)
+
+1e (A), 
+1f (S), 
+20 (D), 
+21 (F), 
+22 (G), 
+23 (H), 
+24 (J), 
+25 (K), 
+26 (L), 
+27 (;:), 
+28 ('")
+29 (`~)
+2a (LShift)
+
+2b (\|), on a 102-key keyboard
+
+2c (Z), 
+2d (X), 
+2e (C), 
+2f (V), 
+30 (B), 
+31 (N), 
+32 (M), 
+33 (,<), 
+34 (.>), 
+35 (/?), 
+36 (RShift)
+
+37 (Keypad-*) or (*/PrtScn) on a 83/84-key keyboard
+38 (LAlt), 
+39 (Space bar),
+3a (CapsLock)
+
+3b (F1), 
+3c (F2), 
+3d (F3), 
+3e (F4), 
+3f (F5), 
+40 (F6), 
+41 (F7), 
+42 (F8), 
+43 (F9), 
+44 (F10)
+
+45 (NumLock)
+46 (ScrollLock)
+
+47 (Keypad-7/Home), 
+48 (Keypad-8/Up), 
+49 (Keypad-9/PgUp)
+4a (Keypad--)
+
+4b (Keypad-4/Left), 
+4c (Keypad-5), 
+4d (Keypad-6/Right), 
+4e (Keypad-+)
+4f (Keypad-1/End), 
+50 (Keypad-2/Down), 
+51 (Keypad-3/PgDn)
+
+52 (Keypad-0/Ins), 
+53 (Keypad-./Del)
+
+54 (Alt-SysRq) on a 84+ key keyboard
+
+55 is less common; occurs e.g. as F11 on a Cherry G80-0777 keyboard, as F12 on a Telerate keyboard, as PF1 on a Focus 9000 keyboard, and as FN on an IBM ThinkPad.
+
+56 mostly on non-US keyboards. It is often an unlabelled key to the left or to the right of the left Alt key.
+
+
+57 (F11), 58 (F12) both on a 101+ key keyboard
+
+
+
+These escaped scancodes occur only on 101+ key keyboards. 
+e0 1c (Keypad Enter)		1c (Enter)
+e0 1d (RCtrl)			1d (LCtrl)
+e0 2a (fake LShift)		2a (LShift)
+e0 35 (Keypad-/)		35 (/?)
+e0 36 (fake RShift)		36 (RShift)
+e0 37 (Ctrl-PrtScn)		37 (*/PrtScn)
+e0 38 (RAlt)			38 (LAlt)
+e0 46 (Ctrl-Break)		46 (ScrollLock)
+e0 47 (Grey Home)		47 (Keypad-7/Home)
+e0 48 (Grey Up)			48 (Keypad-8/UpArrow)
+e0 49 (Grey PgUp)		49 (Keypad-9/PgUp)
+e0 4b (Grey Left)		4b (Keypad-4/Left)
+e0 4d (Grey Right)		4d (Keypad-6/Right)
+e0 4f (Grey End)		4f (Keypad-1/End)
+e0 50 (Grey Down)		50 (Keypad-2/DownArrow)
+e0 51 (Grey PgDn)		51 (Keypad-3/PgDn)
+e0 52 (Grey Insert)		52 (Keypad-0/Ins)
+e0 53 (Grey Delete)		53 (Keypad-./Del)
+
+Set-2     make/break
+Power	e0 37 / e0 f0 37
+Sleep	e0 3f / e0 f0 3f
+Wake	e0 5e / e0 f0 5e
+
+
+Set-1 	  make/break	  
+Power	e0 5e / e0 de		
+Sleep	e0 5f / e0 df		
+Wake	e0 63 / e0 e3		
+
+
+X calls 5d `KEY_Begin' 
