@@ -1,17 +1,20 @@
 Default scancode protcol : Translated Scancode Set 2
 
-Keypress : make
-Keyrelease: break
+The usual PC keyboards are capable of producing three sets of scancodes. 
+Writing 0xf0 followed by 1, 2 or 3 to port 0x60 will put the keyboard in scancode mode 1, 2 or 3. 
+Writing 0xf0 followed by 0 queries the mode, resulting in a scancode byte 43, 41 or 3f from the keyboard.
 
 
--MAKE-
-Functions by assigining a hex value to a button press
-(pressing ESC = scancode 0x01)
 
--BREAK-
-Is obtained by adding 0x80/128 to the value of the key pressed
-(releasing ESC = scancode 0x81)
+Keypress == make
+Keyrelease == break
 
+-MAKE-                                                                                -BREAK-
+Functions by assigining a hex value to a button press                                 Is obtained by adding 0x80/128 to the value of the key pressed
+(SET 1 :: pressing ESC = scancode 0x01)                                               (SET 1 :: releasing ESC = scancode 0x81)
+(SET 2 :: pressing ESC = scancode e0 01 )                                             (SET 2 :: releasing ESC = scancode e0 f0 01 )
+
+                                   The Pause-key has the 8-byte make code e1 14 77 e1 f0 14 f0 77.
 
 
 Three common causes for keyboard error are: 
@@ -34,17 +37,13 @@ ff	Keyboard error
 
 
 
-
-
 The Microsoft keyboard
-
 e0 5b (LeftWindow)
 e0 5c (RightWindow)
 e0 5d (Menu)
 
 
 Ordinary Scancodes
-
 01 (Esc)
 02 (1!), 
 03 (2@), 
@@ -153,34 +152,34 @@ Ordinary Scancodes
 
 These escaped scancodes occur only on 101+ key keyboards. 
 e0 1c (Keypad Enter)		1c (Enter)
-e0 1d (RCtrl)			1d (LCtrl)
-e0 2a (fake LShift)		2a (LShift)
-e0 35 (Keypad-/)		35 (/?)
-e0 36 (fake RShift)		36 (RShift)
-e0 37 (Ctrl-PrtScn)		37 (*/PrtScn)
-e0 38 (RAlt)			38 (LAlt)
-e0 46 (Ctrl-Break)		46 (ScrollLock)
-e0 47 (Grey Home)		47 (Keypad-7/Home)
-e0 48 (Grey Up)			48 (Keypad-8/UpArrow)
-e0 49 (Grey PgUp)		49 (Keypad-9/PgUp)
-e0 4b (Grey Left)		4b (Keypad-4/Left)
-e0 4d (Grey Right)		4d (Keypad-6/Right)
-e0 4f (Grey End)		4f (Keypad-1/End)
-e0 50 (Grey Down)		50 (Keypad-2/DownArrow)
-e0 51 (Grey PgDn)		51 (Keypad-3/PgDn)
-e0 52 (Grey Insert)		52 (Keypad-0/Ins)
-e0 53 (Grey Delete)		53 (Keypad-./Del)
+e0 1d (RCtrl)			      1d (LCtrl)
+e0 2a (fake LShift)		 2a (LShift)
+e0 35 (Keypad-/)		    35 (/?)
+e0 36 (fake RShift)		 36 (RShift)
+e0 37 (Ctrl-PrtScn)		 37 (*/PrtScn)
+e0 38 (RAlt)			       38 (LAlt)
+e0 46 (Ctrl-Break)		  46 (ScrollLock)
+e0 47 (Grey Home)	  	 47 (Keypad-7/Home)
+e0 48 (Grey Up)			    48 (Keypad-8/UpArrow)
+e0 49 (Grey PgUp)	   	49 (Keypad-9/PgUp)
+e0 4b (Grey Left)		   4b (Keypad-4/Left)
+e0 4d (Grey Right)  		4d (Keypad-6/Right)
+e0 4f (Grey End)		    4f (Keypad-1/End)
+e0 50 (Grey Down)		   50 (Keypad-2/DownArrow)
+e0 51 (Grey PgDn)		   51 (Keypad-3/PgDn)
+e0 52 (Grey Insert)		 52 (Keypad-0/Ins)
+e0 53 (Grey Delete)		 53 (Keypad-./Del)
 
 Set-2     make/break
-Power	e0 37 / e0 f0 37
-Sleep	e0 3f / e0 f0 3f
-Wake	e0 5e / e0 f0 5e
+Power	    e0 37 / e0 f0 37
+Sleep	    e0 3f / e0 f0 3f
+Wake	     e0 5e / e0 f0 5e
 
 
 Set-1 	  make/break	  
-Power	e0 5e / e0 de		
-Sleep	e0 5f / e0 df		
-Wake	e0 63 / e0 e3		
+Power	  e0 5e / e0 de		
+Sleep	  e0 5f / e0 df		
+Wake	   e0 63 / e0 e3		
 
 
 X calls 5d `KEY_Begin' 
