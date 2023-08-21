@@ -3,7 +3,7 @@ Default scancode protcol : Translated Scancode Set 2
 The usual PC keyboards are capable of producing three sets of scancodes. 
 Writing 0xf0 followed by 1, 2 or 3 to port 0x60 will put the keyboard in scancode mode 1, 2 or 3. 
 Writing 0xf0 followed by 0 queries the mode, resulting in a scancode byte 43, 41 or 3f from the keyboard.
-
+8042 microprocessor can translate Set 2 back into old Set 1
 
 
 Keypress == make
