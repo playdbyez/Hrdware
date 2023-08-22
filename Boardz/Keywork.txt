@@ -12,6 +12,11 @@ https://tldp.org/HOWTO/pdf/Keyboard-and-Console-HOWTO.pdf
 
 #inspect #include <X11/XKBlib.h>
 #XkbKeycodeToKeysym()
+
+#inspect : #include <X11/Xlib.h> && #include <X11/X.h>
+#XOpenDisplay()
+#XQueryKeymap()
+
 #xmodmap command
 #XkbKeyAction
 
