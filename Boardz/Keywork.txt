@@ -3,6 +3,10 @@ https://tldp.org/HOWTO/pdf/Keyboard-and-Console-HOWTO.pdf
 https://stackoverflow.com/questions/596481/is-it-possible-to-simulate-key-press-events-programmatically
 https://stackoverflow.com/questions/61858082/javascript-to-send-keystrokes-to-a-website
 
+::ANTI K-LOGS::
+Ghostpress: a free anti-keylogger with an extremely small performance footprint. Features Process Protection to stop any other program terminating Ghostpress.
+KL-Detector: a basic keylogger detection tool. Once you detect a keylogger, it's up to you to remove it, but the tool will alert you to the keyloggers presence.
+
 #:::::::::::::: inspect scancodes >> keycodes :::::::::::::::
 #/usr/include/linux/input-event-codes
 #/dev/input/event12
