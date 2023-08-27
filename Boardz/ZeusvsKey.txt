@@ -1,0 +1,57 @@
+https://www.bankinfosecurity.com/how-to-beat-keyloggers-a-2999
+
+How to Beat Keyloggers
+NIST Scientists Offer Tips to Defeat Zeus, Other Malware
+
+Zeus is not alone.
+In fact, the sheer number and insidious nature of the Zeus Trojan and other types of keylogging malware have financial institutions and their customers on high alert for fraud.
+
+To help fight fraud, computer scientists from the National Institute of Standards and Technology offer some insight on how to protect commercial and consumer computers from keylogger infection.
+
+Keyloggers monitor and record keyboard use, including the information typed into a system, which might include the content of emails, usernames and passwords for local or remote systems and applications, as well as financial information like credit card numbers, Social Security numbers or PINs. Some keystroke loggers require the attacker to retrieve the data from the system, whereas others actively transfer the data to another system through email, file transfer or other means.
+
+Tim Grance, program manager of cyber and network security at NIST's Computer Security division, and Murugiah Souppaya, a computer scientist in cyber and metwork Security, say keyloggers go back at least to 1983. Since then, keyloggers have evolved and come in a variety of types: keyboard, software and hardware based.
+
+"It is really a moving target, as malware developing today is rapidly changing," Souppaya says, "so it's hard to use signature based detection to stop them." The mutating nature of malware is such that anti-virus signatures can't keep up with the threat even by the hour.
+
+Keyloggers: Three Types
+NIST scientists identify three main types of keyloggers:
+Hardware -- Tiny inline devices placed between the keyboard and the computer. Because of their size, they can go undetected for long periods of time. These devices have the power to capture hundreds of keystrokes, including banking and email username and passwords. But for the criminal, the threat of being caught breaching the machine is a deterrent.
+Software -- This type of keylogging is done by using the Windows function SetWindowsHookEx that monitors all keystrokes. The spyware will usually appear packaged as an executable file that initiates the hook function, plus a DLL file to handle the logging functions. An application that calls SetWindowsHookEx is capable of capturing even autocomplete passwords.
+Kernel/driver -- This kind of keylogger is at the kernel level and receives data directly from the input device (typically a keyboard). It replaces the core software for interpreting keystrokes. This type of keylogger can be programmed to be virtually undetectable by being executed when the computer is turned on, before any user-level applications start. Since the program runs at the kernel level, one disadvantage to this approach it that it fails to capture autocomplete passwords, as this information is passed in the application layer.
+In some cases, keyloggers have beneficial uses, Grance says, such as parents monitoring their children's browsing on the Internet or corporate monitoring of employees' productivity levels. But malicious keyloggers, such as the Zeus Trojan are popping up everywhere and are stealing everything from banking credentials to corporate data and highly sensitive research.
+
+Defending Against Keyloggers
+There are several kinds of defenses that can be used to spot or prevent keyloggers from embedding on machines:
+Physical Security -- The physical protection of the computer must be considered. "Whether the computer is at home, in an office or during traveling, keeping the computer secure and making sure no one has access to it is a primary concern," says Grance.
+
+Application whitelisting -- is a way to prevent any software that isn't already approved or on the "white list" from being downloaded on to the computer. This is an emerging approach in combating viruses and malware. Application whitelisting tells the computer a list of software considered safe to run, and the machine is instructed to block all others.
+
+Some experts see this approach as superior to the standard signature-based, anti-virus approach of blocking/removing known harmful software (essentially blacklisting), as the traditional approach generally means that exploits are already in the wild.
+
+Detection Software --For home users, Souppaya offers three additional tips to help prevent infection:
+
+Be careful where you go to on the Internet. Drive-by downloads from ads that have been laced with malware are being found now even on popular news sites - not just on the fringes;
+At a minimum, at least have anti-virus and anti-spyware loaded, and make sure they're kept up to date. Again, buy from a reputable vendor;
+Consider operating a "virtual" machine environment to browse the Internet.
+Virtual machines -- are separated into two major categories, based on their use and degree of correspondence to any real machine. A system virtual machine provides a complete system platform that supports the execution of a complete operating system. The other type, a process virtual machine, is designed to run a single program. An essential characteristic of a virtual machine is that the software running inside is limited to the resources and abstractions provided by the virtual machine -- it cannot break out of its virtual world.
+
+The virtual machine can be cleared off on a regular basis, thus keeping the real computer clean. Viruses and malware then won't be able to install onto the computer's hard drive. Souppaya says one limitation in the use and acceptance of virtual machines is the ability for the regular consumer to understand the technology and how to operate a virtual machine, or have the hardware requirements to run one.
+
+Future Trends
+"Moving forward in the next 12-18 months, the major computer manufacturers will begin offering virtual machine technology," Souppaya says. "We're going to see more consumer-friendly operating systems being designed by vendors that will limit malware by having the user on a virtual machine while on the Internet, and the 'home' environment separate."
+Cloud-based whitelisting will also become more popular, making whitelisting more available, says Grance.
+
+Another advancement in the fight against keyloggers and other types of malware is the move by anti-virus vendors to set up reputation-based systems, which checks programs and tells the user whether it is legitimate or malicious.
+
+The addition of a third component in the fight against malware is the use of operating systems and browsers that don't allow the malicious programs to be pushed down in the first place. By isolating and "sandboxing" the user's specific browsing session, Souppaya says, no software is downloaded to the user's computer. He believes this will become more available to consumers in the coming months.
+
+ACH Fraud
+Anti-Phishing, DMARC
+Email Threat Protection
+Fraud Management & Cybercrime
+ID Fraud
+Next-Generation Technologies & Secure Development
+Professional Certifications & Continuous Training
+Security Awareness Programs & Computer-Based Training
+Standards, Regulations & Compliance
