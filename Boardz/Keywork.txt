@@ -1,5 +1,7 @@
 https://www.win.tue.nl/~aeb/linux/kbd/scancodes.html
 https://tldp.org/HOWTO/pdf/Keyboard-and-Console-HOWTO.pdf
+https://stackoverflow.com/questions/596481/is-it-possible-to-simulate-key-press-events-programmatically
+https://stackoverflow.com/questions/61858082/javascript-to-send-keystrokes-to-a-website
 
 #:::::::::::::: inspect scancodes >> keycodes :::::::::::::::
 #/usr/include/linux/input-event-codes
