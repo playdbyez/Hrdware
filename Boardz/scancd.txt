@@ -1,3 +1,13 @@
+Key processing
+Once the keyboard layout is set up, the process of key handling is relatively simple. 
+A keycode is submitted by the driver. The server checks the keycode and changes modifier state where applicable. 
+It also checks for any actions to be performed on that key. Once that is done, the keycode is sent to the client as a key event.
+
+The client then matches up the keycode and modifier state with the keyboard layout previously obtained from the server and performs some action in response. 
+The server provides modifier state and keycodes, but it is up to the client how it wants to treat that key. 
+It may ignore the modifiers completely or even change the symbols to something completely different.
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 Default scancode protcol : Translated Scancode Set 2
 
 The usual PC keyboards are capable of producing three sets of scancodes. 
