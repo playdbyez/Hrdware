@@ -1,0 +1,59 @@
+PPP Surrounding Architecture
+
+(1)
+{
+          RS 232
+          ([modem] DCE -> DTE [comp])
+          
+          SONET/SDH
+          (Synchronous Optical Networking)
+          (Synchronous Digital Hierarchy)
+          
+          ATM
+          (Asynchronous Transfer Mode)
+
+          Ethernet
+          (LAN, MAN, WAN)      
+                                                }
+
+(2)
+{POS (Packet Over SONET/SDH)}
+
+
+(3)
+{
+          HDLC
+        (High-level Data Link Control)
+
+          PPPoE
+        (Point-to-Point Protocol Over Ethernet)
+
+          PPPoA
+        (Point-to-Point Protocol Over ATM)
+                                              }
+
+(4)
+{PPP Encapsulation}
+
+
+(5)
+{
+        LCP
+        (Link Control Protocol)
+        
+        CHAP
+        (Challenge-Handshake Authentication Protocol)
+        
+        PAP
+        (Password Authentication Protocol)
+        
+        EAP
+        (Extended Authentication Protocol)
+        
+        IPCP
+        (Internet Protocol Control Protocol)
+        
+        IP
+        (Internet Protocol)
+                                                                }
+
