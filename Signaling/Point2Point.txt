@@ -3,6 +3,7 @@ FTDI Cable
 5-volt/12-volt UART Protocol
 PuTTY.exe (win) [Speed: 115200]
 Oscilloscope
+Breadboard
 Private Automatic Branch Exchange (PABX)
 Private Branch Exchange (PBX)
 
