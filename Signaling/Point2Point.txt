@@ -1,3 +1,11 @@
+
+FTDI Cable
+5-volt UART Protocol
+PuTTY.exe (win) [Speed: 115200]
+Oscilloscope
+
+
+
 PPP Surrounding Architecture
 
 (1)
