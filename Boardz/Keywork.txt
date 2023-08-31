@@ -3,6 +3,8 @@ https://tldp.org/HOWTO/pdf/Keyboard-and-Console-HOWTO.pdf
 https://stackoverflow.com/questions/596481/is-it-possible-to-simulate-key-press-events-programmatically
 https://stackoverflow.com/questions/61858082/javascript-to-send-keystrokes-to-a-website
 
+
+
 ::ANTI K-LOGS::
 Ghostpress: a free anti-keylogger with an extremely small performance footprint. Features Process Protection to stop any other program terminating Ghostpress.
 KL-Detector: a basic keylogger detection tool. Once you detect a keylogger, it's up to you to remove it, but the tool will alert you to the keyloggers presence.
@@ -37,20 +39,13 @@ KL-Detector: a basic keylogger detection tool. Once you detect a keylogger, it's
 #inspect xmodmap
 hutter-kbd
 
+#iptables -L
 
 To get composed input from an input method, use XmbLookupString or
 XwcLookupString.
 
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-Key processing
-Once the keyboard layout is set up, the process of key handling is relatively simple. 
-A keycode is submitted by the driver. The server checks the keycode and changes modifier state where applicable. 
-It also checks for any actions to be performed on that key. Once that is done, the keycode is sent to the client as a key event.
-
-The client then matches up the keycode and modifier state with the keyboard layout previously obtained from the server and performs some action in response. 
-The server provides modifier state and keycodes, but it is up to the client how it wants to treat that key. 
-It may ignore the modifiers completely or even change the symbols to something completely different.
 
 
 
