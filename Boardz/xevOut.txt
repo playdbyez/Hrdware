@@ -1,0 +1,12 @@
+KeyPress event, serial 37, synthetic NO, window 0x2400001,
+    root 0x405, subw 0x0, time 447255, (202,145), root:(324,259),
+    state 0x0, keycode 38 (keysym 0x61, a), same_screen YES,
+    XLookupString gives 1 bytes: (61) "a"
+    XmbLookupString gives 1 bytes: (61) "a"
+    XFilterEvent returns: False
+
+KeyRelease event, serial 37, synthetic NO, window 0x2400001,
+    root 0x405, subw 0x0, time 447319, (202,145), root:(324,259),
+    state 0x0, keycode 38 (keysym 0x61, a), same_screen YES,
+    XLookupString gives 1 bytes: (61) "a"
+    XFilterEvent returns: False
