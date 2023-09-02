@@ -11,7 +11,26 @@ KeyRelease event, serial 37, synthetic NO, window 0x2400001,
     XLookupString gives 1 bytes: (61) "a"
     XFilterEvent returns: False
 
-
 Xev only works with Keysymsand Keycodes 
 NOT scancodes
+
+
+
+
+
+KeyPress event, serial 37, synthetic NO, window 0x2400001,
+    root 0x405, subw 0x0, time 448614, (202,145), root:(324,259),
+    state 0x0, keycode 64 (keysym 0xffe9, Alt_L), same_screen YES,
+    XLookupString gives 0 bytes: 
+    XmbLookupString gives 0 bytes: 
+    XFilterEvent returns: False
+
+Scancode of L/Alt = 38
+Keysym of L/ALT = 0xffe9
+Keycode of L/ALT = 64
+
+
+
+
+
 
