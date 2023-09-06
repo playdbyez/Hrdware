@@ -54,6 +54,10 @@ $ evtest /dev/input/event4
 $ udevadm monitor
 $ udevadm info -a -p /block/sr0
 
+$ lspci
+$ lsusb
+$ dmidecode
+
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
