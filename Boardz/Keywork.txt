@@ -45,6 +45,13 @@ hutter-kbd
 To get composed input from an input method, use XmbLookupString or
 XwcLookupString.
 
+:::::::::::::: :: INTERACTING WITH CHAR DEVICES :: ::::::::::::
+
+$ cat /proc/bus/input/devices
+$ evtest /dev/input/event4
+
+$ udevadm monitor
+$ udevadm info -a -p /block/sr0
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
