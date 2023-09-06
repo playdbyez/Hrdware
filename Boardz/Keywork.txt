@@ -4,6 +4,7 @@ https://stackoverflow.com/questions/596481/is-it-possible-to-simulate-key-press-
 https://stackoverflow.com/questions/61858082/javascript-to-send-keystrokes-to-a-website
 
 https://thehackerdiary.wordpress.com/2017/04/21/exploring-devinput-1/
+https://www.kernel.org/doc/html/v4.14/input/event-codes.html
 
 
 ::ANTI K-LOGS::
