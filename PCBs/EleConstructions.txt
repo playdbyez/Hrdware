@@ -1,0 +1,30 @@
+
+    Main features of any electronc device
+
+> Printed Circuit Board
+> Components
+> Housing
+
+
+
+:::::: :: REGULATION :: :::::::
+Electrictical Installation Design Guide
+Onsite Guide
+Electrician's Guide
+British Standards Institute (BSI)
+Instititure of Electrical Engineering (IEE)
+      Institution of Engineering and Technology (IET)
+                          'Wiring Matters' by the IET
+                          'IEE Wiring Regulations BS 7671'
+
+
+
+:::::: :: IMPLEMENTATION :: :::::::
+Supporting components such as, resistors, transistors, transformers and capacitors, 
+Are mounted on a PCB's copper foil track petterns
+Via soldering or pinning down said electronics parts together
+Guided by an entry on the Electrician's guide, 
+About the use of an adiabatic equation for calculating the correct size for an earth conductor
+Or calculating the ammount of time taken for a conductor to exceed its limiting temperature.
+
+
