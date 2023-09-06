@@ -3,6 +3,7 @@ https://tldp.org/HOWTO/pdf/Keyboard-and-Console-HOWTO.pdf
 https://stackoverflow.com/questions/596481/is-it-possible-to-simulate-key-press-events-programmatically
 https://stackoverflow.com/questions/61858082/javascript-to-send-keystrokes-to-a-website
 
+https://thehackerdiary.wordpress.com/2017/04/21/exploring-devinput-1/
 
 
 ::ANTI K-LOGS::
