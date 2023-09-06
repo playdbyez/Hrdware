@@ -1,10 +1,57 @@
 
-    Main features of any electronc device
 
+:::::: :: Any electronic device :: :::::::
 > Printed Circuit Board
 > Components
 > Housing
-447943616858
+
+
+##################################################### TOOLS ###################################################
+> Safety Goggles
+> Solder Iron
+> Solder Removal
+> Desoldering Braid
+> Integrated circuit Insertion/Extraction tool
+> Terminal Pins
+> Spot-face Cutter
+> Pliers
+> Punches
+> Drills
+> Needle Files
+> Vice
+> Solder Stand
+> Circuit-board Stand
+> Mini Long-nose Pliers
+> Mini Side-cutters
+> Wire-strippers
+
+
+
+
+:::::: :: Soldering Iron :: :::::::
+              
+<=======[ oo]---
+|    |    |    |
+(1) (2)  (3)   (4)
+
+1 bit
+2 heating element
+3 handle
+4 mains powerlead
+
+BIT SIZES
+- 4.8mm
+- 3.2mm
+- 2.4mm
+- 1.6mm
+
+Recommended size of bit is 2.4mm
+Recommended wattage is 12w - 25w
+
+
+
+##############################################################################################################
+
 
 
 :::::: :: REGULATION :: :::::::
@@ -20,11 +67,14 @@ Instititure of Electrical Engineering (IEE)
 
 
 :::::: :: IMPLEMENTATION :: :::::::
-Supporting components such as, resistors, transistors, transformers and capacitors, 
+Supporting components such as, resistors, transistors, transformers, capacitors and other integrated circuits 
 Are mounted on a PCB's copper foil track petterns
 Via soldering or pinning down said electronics parts together
 Guided by an entry on the Electrician's guide, 
 About the use of an adiabatic equation for calculating the correct size for an earth conductor
 Or calculating the ammount of time taken for a conductor to exceed its limiting temperature.
+
+
+Ch3
 
 
