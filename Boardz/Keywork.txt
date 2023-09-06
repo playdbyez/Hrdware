@@ -6,6 +6,8 @@ https://stackoverflow.com/questions/61858082/javascript-to-send-keystrokes-to-a-
 https://thehackerdiary.wordpress.com/2017/04/21/exploring-devinput-1/
 https://www.kernel.org/doc/html/v4.14/input/event-codes.html
 
+https://www.offsec.com/metasploit-unleashed/keylogging/
+
 
 ::ANTI K-LOGS::
 Ghostpress: a free anti-keylogger with an extremely small performance footprint. Features Process Protection to stop any other program terminating Ghostpress.
