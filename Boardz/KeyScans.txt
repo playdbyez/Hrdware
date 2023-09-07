@@ -1,4 +1,32 @@
 Key processing
+
+Electronic Keyboard device generates an electric signal in two formats
+[USB-Event] USB Protocol Encoding
+[USB-HID-Event] Human Interface Device protocol (HID)
+
+Processed by a USB-Controller,
+Sent through PCI-e
+to the Interrupt Controller (APIC)
+Interrupt controller triggers INT Pin of processor
+IRQ-Number requested from Interrupt controler to kernel
+
+If the key press uses the HID protocol
+The HID layer interprets event according to the HID descriptor it has required from the device on initialization.
+
+Event is sent to Input layer
+
+Events from the Input Layer are available via /dev/input/event* to userland processes.
+You can use 'evtest' to watch those events in real-time.
+
+X11 Uses its own input driver called 'evdev' to read from /dev/input/event* devices
+Remapping of keys is observable via 'xmodmap'.
+
+The X server then sends to the X client(app) a keyboard event
+Observable via 'xev'.
+
+From the X client event:
+LibreOffice will process this event directly.
+VIM will be running in an 'xterm' which will process the event.
 Once the keyboard layout is set up, the process of key handling is relatively simple. 
 A keycode is submitted by the driver. The server checks the keycode and changes modifier state where applicable. 
 It also checks for any actions to be performed on that key. Once that is done, the keycode is sent to the client as a key event.
