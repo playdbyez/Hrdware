@@ -56,6 +56,8 @@ Then try again with the --grab option
 
 #Download xmonad 
 #Download xdotool for automation
+#Download ydotool for automation
+#Download dotool for automation
 #Download tldr <command> for most used options of said command
 
 :::::::::::::: :: INTERACTING WITH CHAR DEVICES :: ::::::::::::
