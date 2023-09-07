@@ -1,5 +1,6 @@
 https://www.win.tue.nl/~aeb/linux/kbd/scancodes.html
 https://tldp.org/HOWTO/pdf/Keyboard-and-Console-HOWTO.pdf
+https://stackoverflow.com/questions/35689985/sending-key-presses-to-applications
 https://stackoverflow.com/questions/596481/is-it-possible-to-simulate-key-press-events-programmatically
 https://stackoverflow.com/questions/61858082/javascript-to-send-keystrokes-to-a-website
 https://unix.stackexchange.com/questions/545274/how-does-a-keyboard-press-get-processed-in-the-linux-kernel
@@ -52,6 +53,9 @@ hutter-kbd
 Then try again with the --grab option
 
 #When analyzing 'xev' use 'lsof'/'pmap' to trace read/write access of the xev process 
+
+#Download xdotool for automation
+#Download tldr <command> for most used options of said command
 
 :::::::::::::: :: INTERACTING WITH CHAR DEVICES :: ::::::::::::
 
