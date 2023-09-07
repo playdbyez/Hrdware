@@ -10,7 +10,7 @@ https://www.kernel.org/doc/html/v4.14/input/event-codes.html
 
 https://www.offsec.com/metasploit-unleashed/keylogging/
 
-
+PC 8042 Controller by Gary J Konzak  ISBN 0-929392-21-3.
 ::ANTI K-LOGS::
 Ghostpress: a free anti-keylogger with an extremely small performance footprint. Features Process Protection to stop any other program terminating Ghostpress.
 KL-Detector: a basic keylogger detection tool. Once you detect a keylogger, it's up to you to remove it, but the tool will alert you to the keyloggers presence.
