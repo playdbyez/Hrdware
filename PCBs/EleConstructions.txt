@@ -1,12 +1,31 @@
 
-
 :::::: :: Any electronic device :: :::::::
 > Printed Circuit Board
 > Components
 > Housing
 
 
-##################################################### TOOLS ###################################################
+:::::: :: IMPLEMENTATION :: :::::::
+Supporting components such as, resistors, transistors, transformers, capacitors and other integrated circuits 
+Are mounted on a PCB's copper foil track petterns
+Via soldering or pinning down said electronics parts together
+Guided by an entry on the Electrician's guide, 
+About the use of an adiabatic equation for calculating the correct size for an earth conductor
+Or calculating the ammount of time taken for a conductor to exceed its limiting temperature.
+
+
+:::::: :: REGULATION :: :::::::
+Electrictical Installation Design Guide
+Onsite Guide
+Electrician's Guide
+British Standards Institute (BSI)
+Instititure of Electrical Engineering (IEE)
+      Institution of Engineering and Technology (IET)
+                          'Wiring Matters' by the IET
+                          'IEE Wiring Regulations BS 7671'
+
+
+:::::: :: Tools :: :::::::
 > Safety Goggles
 > Solder Iron
 > Solder Removal
@@ -27,9 +46,9 @@
 
 
 
-
 :::::: :: Soldering Iron :: :::::::
-              
+A hand tool heated by gas or electricity in order to melt solder onto joints.
+
 <=======[ oo]---
 |    |    |    |
 (1) (2)  (3)   (4)
@@ -49,32 +68,40 @@ Recommended size of bit is 2.4mm
 Recommended wattage is 12w - 25w
 
 
+:::::: :: Capacitors :: :::::::
+This component consists of two metal plates seperated by an insulating layer called the Dielectric.
+Its purpose is to measure Capacitance in units of farads (F) 
+while abiding by a Working Voltage and operating within a certain ammount of Tolerance,
+in which, both should not be exceeded.
 
-##############################################################################################################
+Non-Electrolytic capacitors are differentiated by 
+the substance that makes up its dielectric insulation,
+which includes Polycarbonate, Polypropylene, Polyester, Polystyrene, Mica and Ceramic.
 
-
-
-:::::: :: REGULATION :: :::::::
-Electrictical Installation Design Guide
-Onsite Guide
-Electrician's Guide
-British Standards Institute (BSI)
-Instititure of Electrical Engineering (IEE)
-      Institution of Engineering and Technology (IET)
-                          'Wiring Matters' by the IET
-                          'IEE Wiring Regulations BS 7671'
-
-
-
-:::::: :: IMPLEMENTATION :: :::::::
-Supporting components such as, resistors, transistors, transformers, capacitors and other integrated circuits 
-Are mounted on a PCB's copper foil track petterns
-Via soldering or pinning down said electronics parts together
-Guided by an entry on the Electrician's guide, 
-About the use of an adiabatic equation for calculating the correct size for an earth conductor
-Or calculating the ammount of time taken for a conductor to exceed its limiting temperature.
+//Capacitors Types:
+<> Electrolytic Capacitor
+<> Non-Electrolytic Capacitor
+<> Variable Capacitor
 
 
-Ch3
+//Capacitor Units
+Microfarad (uF) =  1 uF
+Nanofarad  (nF) =  0.001 uF
+Picofarad  (pF) =  0.000001 uF 
+
+//Colour Code
+BAND 1 - First Figure
+BAND 2 - Second Figure
+BAND 3 - Multiplication Figure
+BAND 4 - Tolerance
+BAND 5 - Working Voltage
+
+
+//Capacitors Shapes
+ 
+        ---[ ]---                             [_]
+                                              | |
+
+ Axial-leaded Capacitor            Radial-leaded Capacitor
 
 
