@@ -43,7 +43,7 @@ Instititure of Electrical Engineering (IEE)
 > Mini Long-nose Pliers
 > Mini Side-cutters
 > Wire-strippers
-
+> Core solder
 
 
 :::::: :: Soldering Iron :: :::::::
@@ -76,7 +76,7 @@ in which, both should not be exceeded.
 
 Non-Electrolytic capacitors are differentiated by 
 the substance that makes up its dielectric insulation,
-which includes Polycarbonate, Polypropylene, Polyester, Polystyrene, Mica and Ceramic.
+which includes Polycarbonate, Polypropylene, Polyester, Polystyrene, Mica, Tantalum and Ceramic.
 
 //Capacitors Types:
 <> Electrolytic Capacitor
