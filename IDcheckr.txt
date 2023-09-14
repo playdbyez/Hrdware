@@ -10,3 +10,4 @@ Recommended devices
 
 > GQRX
 > rtl_fm
+Open Sesame Attack
