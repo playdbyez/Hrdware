@@ -1,6 +1,7 @@
 https://fcc.io/
 
 Recommended devices
+<De bruijn Sequence>
 
 > RHackRF One
 > RTL sdr
