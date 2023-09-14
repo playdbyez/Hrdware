@@ -11,6 +11,10 @@ Recommended devices
 > GoodFET
 >RF transmitter 315MHz
 
+>Logic Analyzer
+>SMD Micro Probes
+
+
 > GQRX
 > rtl_fm
 
