@@ -13,6 +13,9 @@ Mattel IM-ME
 > GoodFET
 >RF transmitter 315MHz
 
+
+
+>Multimeter + Continuity test for Pin marking
 >Logic Analyzer
 >SMD Micro Probes
 
