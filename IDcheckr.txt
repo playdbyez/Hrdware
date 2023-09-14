@@ -4,6 +4,8 @@ Recommended devices
 
 > RHackRF One
 > RTL sdr
+> Yard Stick One
+> rfcat
 
 > GQRX
 > rtl_fm
