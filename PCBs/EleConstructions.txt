@@ -43,7 +43,7 @@ Instititure of Electrical Engineering (IEE)
 > Mini Long-nose Pliers
 > Mini Side-cutters
 > Wire-strippers
-> Core solder
+> Cored solder
 
 
 :::::: :: Soldering Iron :: :::::::
@@ -66,7 +66,20 @@ BIT SIZES
 
 Recommended size of bit is 2.4mm
 Recommended wattage is 12w - 25w
+Recommended spacing between components is 2mm
+Avoid letting the solder touch part of another solder, as to prevent shorting the circuit.
+To prevend copper oxide  from  interfering with soldering the foil track, use a cleaning solution named 'Flux' or 'Flux-Cored Solder'.
+or clean  the board with an abrasive fibreglass pencil 
 
+:::::: :: Circuits :: :::::::
+> Copper Clad Board
+Though a multi-layer pcb is comprised of several layers of internal copper connections.
+Consisting of 1.5 mm of insulating material and 0.2 mm of copper on one surface or both surfaces if the board is double sided.
+
+Circuits can be designed digitally with applications such as:
+Crocodile Technology
+RealPCB
+Osmond
 
 :::::: :: Capacitors :: :::::::
 This component consists of two metal plates seperated by an insulating layer called the Dielectric.
