@@ -1,0 +1,2 @@
+If a device is Flash Protected,
+Glithc it with 'Chip Whisperer'
