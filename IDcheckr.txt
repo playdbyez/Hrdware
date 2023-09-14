@@ -1,1 +1,9 @@
 https://fcc.io/
+
+Recommended devices
+
+> RHackRF One
+> RTL sdr
+
+> GQRX
+> rtl_fm
