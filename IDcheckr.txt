@@ -3,11 +3,17 @@ https://fcc.io/
 Recommended devices
 <De bruijn Sequence>
 
-> RHackRF One
+> HackRF One
+> BladeRF
 > RTL sdr
 > Yard Stick One
 > rfcat
+> GoodFET
+>RF transmitter 315MHz
 
 > GQRX
 > rtl_fm
+
 Open Sesame Attack
+
+
