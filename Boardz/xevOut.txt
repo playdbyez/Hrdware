@@ -96,6 +96,7 @@ error: this device is grabbed and I cannot record events
 
 Objects at /dev/input should be accessed via 
 https://thehackerdiary.wordpress.com/2017/04/21/exploring-devinput-1/
+https://www.baeldung.com/linux/start-here
 
 
 
@@ -105,9 +106,13 @@ READER
 $ sudo cat /dev/input/event4 | od -t x1 -w24
 0000000 2e 16 e9 63 00 00 00 00 f3 75 0a 00 00 00 00 00 02 00 00 00 ff ff ff ff
 0000030 2e 16 e9 63 00 00 00 00 f3 75 0a 00 00 00 00 00 02 00 01 00 ff ff ff ff
-So, these 24 bytes relate to the structure, which is used by the kernel code to store the event. Thus, let’s split them into parts:
+
+The first 24 bytes relate to the structure, which is used by the kernel code to store the event. 
+Thus, let’s split them into parts:
 
 
 2e 16 e9 63 00 00 00 00 17 95 0a 00 00 00 00 00 02 00 00 00 fd ff ff ff
 |          16 bytes long system time           |type |code |   value   |
-The first 16 bytes are for the timestamp, then come the event type and code, each two bytes wide. Finally, we have an event value four bytes wide.
+
+The first 16 bytes are for the timestamp, then come the event type and code, each two bytes wide. 
+Finally, we have an event value four bytes wide.
