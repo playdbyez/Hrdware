@@ -113,6 +113,10 @@ Thus, let’s split them into parts:
 
 2e 16 e9 63 00 00 00 00 17 95 0a 00 00 00 00 00 02 00 00 00 fd ff ff ff
 |          16 bytes long system time           |type |code |   value   |
-
+						65 7a 08 65  57 a7 0a 00
 The first 16 bytes are for the timestamp, then come the event type and code, each two bytes wide. 
 Finally, we have an event value four bytes wide.
+
+to inspect its codes cat out:
+/usr/include/linux/input.h
+/usr/include/linux/input-event-codes.h
