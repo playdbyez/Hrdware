@@ -68,13 +68,17 @@ ksname = "a"
 Inspect X11 XAnyEvent
 Inspect X11 XEvent
 
-
-
 }
 
+####################################################################
 
+MOUSE EVENTS
+$ /dev/input/mice  	== Touchpad 
+$ /dev/input/mouse0 	== Wired Mouse
+$ /dev/input/mouse1 	== Wireless Mouse
 
+#############################################################################
 
-
-
+Objects at /dev/input should be accessed via 
+https://thehackerdiary.wordpress.com/2017/04/21/exploring-devinput-1/
 
