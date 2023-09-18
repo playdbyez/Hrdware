@@ -44,3 +44,25 @@ if(XSendEvent(display, PointerWindow, True, Oxfff, &event) == 0)
   XFlush(display);
   XCloseDisplay(display); 
 }
+
+//Part 2 Chrome Compatible
+
+#include <X11/extensions/XTest.h> 
+
+void SendClick(int button, Bool down) { 
+Display *display = XOpenDisplay(NULL); 
+XTestFakeButtonEvent(display, button, down, CurrentTime); 
+XFlush(display); 
+XCloseDisplay(display); 
+} 
+
+
+//Part 3 Calling the function
+//You Need add-lX11 -lXtst libs to compile
+
+//XSendEvent variant
+mousClick(1);
+
+//XTestFakeButtonEvent variant
+SendClick (1, true);   //press lmb
+SendClick(1, false);  //release lmb
