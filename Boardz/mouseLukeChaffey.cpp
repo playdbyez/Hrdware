@@ -18,7 +18,7 @@ memset(&event, 0x00, sizeof(event));
   
 event.type = ButtonPress; 
 event.xbutton.button = button; 
-event.xbutton.same screen = True; 
+event.xbutton.same_screen = True; 
 
   
 XQueryPointer(display, RootWindow(display, DefaultScreen(display)), &event.xbutton.root, &event.xbutton.window, &event.xbutton.x_root, &event.xbutton.y_root, &event.xbutton.x, &event.xbutton.y, &event.xbutton.state); 
