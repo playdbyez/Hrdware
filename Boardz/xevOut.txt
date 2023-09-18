@@ -11,10 +11,9 @@ KeyRelease event, serial 37, synthetic NO, window 0x2400001,
     XLookupString gives 1 bytes: (61) "a"
     XFilterEvent returns: False
 
-Xev only works with Keysymsand Keycodes 
+Xev only works with Keysyms and Keycodes 
 NOT scancodes
-
-
+The "keypress" event doesn't give you key codes, it gives you character codes.
 
 
 
