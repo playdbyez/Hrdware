@@ -29,6 +29,42 @@ Scancode of L/Alt = 38
 Keysym of L/ALT = 0xffe9
 Keycode of L/ALT = 64
 
+#################################################
+
+
+XEV.c
+
+
+//Pulling from XEvent;
+//Pulling from XAnyEvent *e = (XAnyEvent *) eventp;
+
+Prologue(void)
+{
+event_name = "KeyPress" event
+e->serial = serial "37"
+}
+
+
+do_keyPress(void)
+{
+KeyCode kc = 0;
+
+printf ("    state 0x%x, keycode %u (keysym 0x%lx, %s), same_screen %s,\n",
+	    e->state, e->keycode, (unsigned long) ks, ksname, e->same_screen ? Yes : No);
+
+
+e->keycode = "38"
+ks = 0x"61"
+ksname = "a"
+
+Inspect X11 XAnyEvent
+Inspect X11 XEvent
+
+
+
+}
+
+
 
 
 
