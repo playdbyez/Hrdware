@@ -79,9 +79,14 @@ $ /dev/input/mouse1 	== Wireless Mouse
 
 #############################################################################
 $ sudo evtest --grab /dev/input/event4
+
 > Libevdev_grab()
 //prevents other files from accessing events
 //Cannot see the cursor's display on screen
+
+$ sudo evemu-record /dev/input/event4
+error: this device is grabbed and I cannot record events
+
 
 
 > uobikiemukot/linux_input.c
