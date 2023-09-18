@@ -79,6 +79,15 @@ $ /dev/input/mouse1 	== Wireless Mouse
 
 #############################################################################
 
+> Libevdev_grab()
+//prevents other files from accessing events
+
+
+> uobikiemukot/linux_input.c
+//small event based code
+
+#############################################################################
+
 Objects at /dev/input should be accessed via 
 https://thehackerdiary.wordpress.com/2017/04/21/exploring-devinput-1/
 
