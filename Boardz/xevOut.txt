@@ -78,9 +78,10 @@ $ /dev/input/mouse0 	== Wired Mouse
 $ /dev/input/mouse1 	== Wireless Mouse
 
 #############################################################################
-
+$ sudo evtest --grab /dev/input/event4
 > Libevdev_grab()
 //prevents other files from accessing events
+//Cannot see the cursor's display on screen
 
 
 > uobikiemukot/linux_input.c
