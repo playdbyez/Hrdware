@@ -1,0 +1,8 @@
+Manufacturer     : Lenovo 2020
+Product Name     : ThinkCentre M70q
+ICC ID           : RR-LVK-M70q-11E7
+SN               : S4RU8390
+Machine Type     : 11DU 
+Manufacture Date : 21/03 
+CAN ICES - 3 (B)
+CAN NMB  - 3 (B)
