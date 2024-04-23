@@ -6,3 +6,95 @@ Machine Type     : 11DU
 Manufacture Date : 21/03 
 CAN ICES - 3 (B)
 CAN NMB  - 3 (B)
+
+############################### :: BIOS INFO:: ################################
+
+LOCATION//Security >> Secure Boot 
+
+Secure Boot options:
+[ 0N ] - Secure Boot
+[ 0N ] - Deployed Mode
+
+
+
+LOCATION//Secure Boot >> Key Management
+
+Key Management options:
+---------------------------------------------
+[] Platform Key (PK) | 802| 1| Factory
+
+List     : 1
+Sig. Type: X.509
+Count    : 1
+Size     : 758
+GUID     : 26DC4851-195F-4AE1-9A19-FBF883BBB35E
+Cert     : LENOVO
+
+
+---------------------------------------------
+[] Key Exchange Keys | 2362| 2| Factory
+
+List     : 1
+Sig. Type: X.509
+Count    : 1
+Size     : 758
+GUID     : 26DC4851-195F-4AE1-9A19-FBF883BBB35E
+Cert     : LENOVO
+
+
+List     : 2
+Sig. Type: X.509
+Count    : 1 
+Size     : 1516
+GUID     : 77FA9ABD-0359-4D32-BD60-28F4E78F784B
+Cert     : Microsoft Corporation KEK CA 2011
+
+---------------------------------------------
+[] Authorized Signatures | 4952| 4| Factory
+
+List     :  1
+Sig.Type : X.509
+Count    : 1
+Size     : 903
+GUID     : 26DC4851-195F-4AE1-9A19-FBF883BBB35E
+Cert     : Lenovo UEFI CA 2014
+
+List     : 2
+Sig.Type : X.509
+Count    : 1
+Size     : 818
+GUID     : 26DC4851-195F-4AE1-9A19-FBF883BBB35E
+Cert     : Trust - Lenovo Certificate
+
+List     : 3
+Sig.Type : X.509
+Count    : 1
+Size     : 1556
+GUID     : 77FA9ABD-0359-4D32-BD60-28F4E78F784B
+Cert     : Microsoft Corporation UEFI CA 2011
+
+List     : 4
+Sig.Type : X.509
+Count    : 1
+Size     : 1499
+GUID     : 77FA9ABD-0359-4D32-BD60-28F4E78F784B
+Cert     : Microsoft Windows Production PCA 2011
+
+---------------------------------------------
+[] Forbidden Signatures | 4040| 83| Mixed
+
+List     : 1
+Sig.Type : SHA256
+Count    : 77
+Size     : 32
+GUID     : 77FA9ABD-0359-4D32-BD60-28F4E78F784B
+Cert     : 69D9B480 ...
+
+List     : 2
+Sig.Type : SHA256
+Count    : 6
+Size     : 32
+GUID     : 77FA9ABD-0359-4D32-BD60-28F4E78F784B
+Cert     : 4CFBD881 ...
+
+###########################################################################################################################################################
