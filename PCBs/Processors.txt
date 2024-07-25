@@ -1,0 +1,47 @@
+[ ] Processors [ ]
+ 
+#####
+[CPU] Central Processing Unit
+ 
+#####
+[X86] Intel 8086
+ 
+#####
+[ARM] Advanced RISC Machines
+ 
+#####
+[RISC-V]
+ 
+ 
+#####
+[ASIC] Application-Specific Integrated Circuit
+	- Costly
+	- Aimed at processing data for a single application per chip
+	- Cannot be reprogrammed after manufacture
+	- Switches, USB chargers, Toys
+	- ASIC Cryptominers [CKB Miner]> GraphicsCard (GOLDSHELL CK6)
+Manufactoring Options:
+	- Semi-Custom (Design logic gates connections)
+	- Full-Custom   (design every transistor from scratch)
+ 
+ 
+#####
+[FPGA] Field-Programmable Grade Arrays
+ 	Designed be reprogramable through Hardware Description Language (Verilog HDL, VHDL)
+	- Less powerful than ASIC
+	- Xilinx
+Popular in: 
+	- Alternating ML models
+	- Audio processing
+	- Medical devices 
+	- Automotive 
+	- Video and image processing
+	- AirSpace
+	- Wireless communication
+	- ASIC prototyping/ Rapid prototyping
+	- Reconstructing gaming console processors (Nt mini, Mega SG, MiSTer )
+Design Software:
+	- LabView System Design
+	- Altera
+	- Vivado Design Suite
+ 
