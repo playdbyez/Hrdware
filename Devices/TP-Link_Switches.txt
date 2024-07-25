@@ -1,0 +1,14 @@
+TP-Link Unmanaged Rackmountable Switches
+	Composition:
+			- RJ45 port
+			- SFP  port
+			- PoE+ port
+ 
+	Products:
+			- TL-SF1048		[48 ports]
+			- TL-SG1024DE	[24 ports]
+			- TL-SG1048		[48 ports]
+			- TL-SG1218MP	[18 ports / 2 SFP ports]
+			- TL-SG1218MPE	[16 PoE+ ports / 2 SFP ports / 2 ports]
+			- TL-SG1428PE	[24 PoE+ ports / 2 SFP ports / 4 ports]
+ 
