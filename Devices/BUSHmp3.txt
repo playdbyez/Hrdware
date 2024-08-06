@@ -1,0 +1,32 @@
+INF0:
+
+NAME   : Bush mp3 player with display
+MODEL  : MP30 
+ROM    : 8GB NAND Flash
+BATTERY: 3.7V/160mAh Lithium
+USB C  : USB 2
+BATCH N: 3335 
+AUDIO FORMATS:
+  - MP3
+  - WMA
+  - APE
+  - WAV
+  - FLAC
+  - OGG
+
+COMPAT SYSTEMS:
+  - win98
+  - win7
+  - win8
+  - win10
+  - winME
+  - win2K
+  - winXP
+  - winVISTA
+  - Linux 6.2
+  - Linux 9
+  - Mac OSX
+
+HELP: bush-support.com
+      03456003021
+CE/ UKCA
