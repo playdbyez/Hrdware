@@ -1,0 +1,63 @@
+
+[] ######## Primary Motherboard Components ########## []
+
+[] Main Memory/Random Access Memory (RAM)
+[] CPU
+[] Clock
+[] Cache Memory
+
+
+#### CPU components ####
+
+[] Control Unit
+   - Moves data around the system
+   - Sends signals to hardware
+
+[] Airthmetic Logic Unit
+   - Performs calculations
+   - Gateway between primary memory and storage memory
+
+[] Registers
+   - High speed memory for small data
+   - Stores address of next instruction to execute
+   - Storest current instructiong decogin
+   - Stores calculation results
+   - Different types are implemented
+          > Program Counter
+          > Accumulator
+          > Memory address register
+          > Memory data register
+          > Current instruction register
+
+
+[] Cache
+   - High speed version of RAM 
+   - Supporting feature built into the CPU
+   - Holds data that the processor is likely to access
+   - Expensive per physical size
+   - Two types are implemented
+          > L1 cache: Used more frequently
+          > L2 cache: Used less frequently
+
+[] Buses
+ - Transfers information between components
+ - Different types are implemented
+          > Address bus: Uni-directional from CPU to RAM/Cache
+                         Identifies the address location to read or write operations
+
+          > Data bus:    Bi-directional 
+                         Transmits from RAM to CPU, Hardware to CPU, Hardware to RAM, CPU to CPU and vice-versa
+                         Ammount of data transmited accross the width of the data bus per cycle is dicated by the Word Size, usually 8 bytes per cycle
+                         Prim. CPU to sec.CPU transmissions within the same architecture must cross the main memory (RAM)
+                         Supports Direct Memory Acess (DMA) which is a way of accessing RAM from Hardware without crossing the CPU
+
+          > Control bus
+
+[] ######## Secondary Motherboard Components ########## []
+
+[] Read-Only Memory (ROM)
+ - Non-Volatile
+ - Stores BIOS Configuration
+          > BIOS: Software Instruction-set for ROM
+                  Deployed by the manufactorer
+                  Stores services/device drivers
