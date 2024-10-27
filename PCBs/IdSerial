@@ -1,6 +1,7 @@
 > Monitor SPI/I2C/UART/etc
-> Detect Frequency timing for Frequency-Hopping Spread Spectrum (FHSS)
+> Detecet if transmission Fixed-Frequency transmission or Frequency-Hopping Spread Spectrum transmission
+> Detect Frequency timing for FHSS
 > Detect Frequency hopping pattern
 > Detect modulation
 > Detect Baudrate
->Determine Data transmitted vs Data Inputed
+> Determine Data transmitted vs Data Inputed
