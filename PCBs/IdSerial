@@ -1,5 +1,5 @@
 > Monitor SPI/I2C/UART/etc
-> Detect Frequency timing for FHSS
+> Detect Frequency timing for Frequency-Hopping Spread Spectrum (FHSS)
 > Detect Frequency hopping pattern
 > Detect modulation
 > Detect Baudrate
