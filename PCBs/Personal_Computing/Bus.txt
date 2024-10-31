@@ -16,6 +16,7 @@
     - Bi-directional 
     - Identifies what data requires processing
     - Transmits from RAM to CPU, Hardware to CPU, Hardware to RAM, CPU to CPU and vice-versa
+    - Speed of the bus is dictated by the clock frequency
     - Ammount of data transmited accross the width of the data bus per cycle is dictated by the Word Size, usually 8 bytes per cycle
     - Prim. CPU to sec.CPU transmissions within the same architecture must cross the main memory (RAM)
     - Supports Direct Memory Acess (DMA) which is a way of accessing RAM from Hardware without crossing the CPU
