@@ -4,27 +4,46 @@
 
  - Lines or cables
  - Transfers information between components
- - Different types are implemented
+ - Can be double-pumped or quad-pumped
 
-         > Address bus:  Uni-directional from CPU to RAM/Cache
-                         Identifies the address location to read or write operations
-                         Dictates the speed of the processor
-
-
-
-
-           > Data bus:   Bi-directional 
-                         Identifies what data requires processing
-                         Transmits from RAM to CPU, Hardware to CPU, Hardware to RAM, CPU to CPU and vice-versa
-                         Ammount of data transmited accross the width of the data bus per cycle is dictated by the Word Size, usually 8 bytes per cycle
-                         Prim. CPU to sec.CPU transmissions within the same architecture must cross the main memory (RAM)
-                         Supports Direct Memory Acess (DMA) which is a way of accessing RAM from Hardware without crossing the CPU
+[ ] Address bus:  
+    - Uni-directional from CPU to RAM/Cache
+    - Identifies the address location to read or write operations
+    - Dictates the speed of the processor
 
 
+[ ] Data bus:   
+    - Bi-directional 
+    - Identifies what data requires processing
+    - Transmits from RAM to CPU, Hardware to CPU, Hardware to RAM, CPU to CPU and vice-versa
+    - Ammount of data transmited accross the width of the data bus per cycle is dictated by the Word Size, usually 8 bytes per cycle
+    - Prim. CPU to sec.CPU transmissions within the same architecture must cross the main memory (RAM)
+    - Supports Direct Memory Acess (DMA) which is a way of accessing RAM from Hardware without crossing the CPU
 
-         > Control bus:  Determines whether the CPU is receiving or sending data
-                         Control lines permit the bus to send read or write signals to memory
-                         Transmits clock pulses and activity synchronization data in order to time processes
-                         Common signals:
-                                        [IRQ] Interrupt request    : From hardware to CPU, interrupts the CPU's current task to prioritise hardware signals
-                                        [CCL] System Clock Control : Resposible for the timing of devices on the motherboard and CPU
+
+[ ] Control bus:  
+    - Determines whether the CPU is receiving or sending data
+    - Control lines permit the bus to send read or write signals to memory
+    - Transmits clock pulses and activity synchronization data in order to time processes
+      Common signals:
+                 [IRQ] Interrupt request    : From hardware to CPU, interrupts the CPU's current task to prioritise hardware signals
+                 [CCL] System Clock Control : Resposible for the timing of devices on the motherboard and CPU
+
+
+
+[] Frequencies:
+   A quad-pumped 200MHz bus is advertised as a 800MHz bus.
+-   800MHz
+-   1066MHz
+-   1333MHz
+-   1600MHz
+ 
+
+
+[] Double-pumped
+   Data is transmitted two times per cycle.
+
+[] Quad-Pumped
+   Data is transmitted four times per cycle.
+
+
