@@ -1,0 +1,11 @@
+############:: Virtual Memory ::##############
+[] Virtual Memory / Virtual Storage
+[] Memory Management Technique employed by the OS
+
+
+
+
+############:: Virtual Address Space ::##############
+
+[] Dictated by the instruction set of the processor
+[] 
