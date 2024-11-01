@@ -1,11 +1,15 @@
 ############:: Virtual Memory ::##############
 [] Virtual Memory / Virtual Storage
-[] Memory Management Technique employed by the OS
+[] Memory Management Technique employed by the Operating System 
+[] Since programs rarely use large amounts of memory at any one time, segments of Hard Disk Storage is then used as a contiguous address space for a given process.
+[] 
 
 
 
 
 ############:: Virtual Address Space ::##############
 
-[] Dictated by the instruction set of the processor
-[] 
+[] Dictated by the instruction set of the processor and supported by the OS's pointer size implementation
+[] An Operating System's pointer can be of a size of 4 bytes for 32-bit OSversion or 8 bytes for 64-bit OSversion
+[]
+[] Translated into Physical Address  in RAM via the Memory Management Unit
