@@ -102,3 +102,6 @@ tᵣₚ = Row Precharge Time
 [] First RAS multiplexes its address and transmits it back to CPU
 [] Subsequently CAS multiplexes its address and transmits it back to CPU
 [] CAS data is available after CL cycles
+
+
+https://www.techtarget.com/searchstorage/definition/RAM-random-access-memory
