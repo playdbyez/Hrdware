@@ -1,13 +1,13 @@
 ############[] Dynamic Random Access Memory []###########
 
-A DRAM chip is made up of several cells organised in rows and columns.
-Slower and cheaper than SRAM
-Small in size and thus easier to pack large ammounts together 
-Simpler electric schematic
-Less power hungry design
-Asynchronous DRAM is no longer relevant.
-Synchronous DRAM works relative to a clock frequency. 
-Said clock frequency determines the speed of the data bus attached to it.
+[] A DRAM chip is made up of several cells organised in rows and columns.
+[] Slower and cheaper than SRAM
+[] Small in size and thus easier to pack large ammounts together 
+[] Simpler electric schematic
+[] More power hungry design
+[] Asynchronous DRAM is no longer relevant.
+[] Synchronous DRAM works relative to a clock frequency. 
+[] Said clock frequency determines the speed of the data bus attached to it.
 
 
 
@@ -22,10 +22,12 @@ Said clock frequency determines the speed of the data bus attached to it.
 ################ ELECTRICAL COMPONENTS ###############
 
 [] Capacitor []
-   - Stores the state of the cell (charged / not charged)
+   - Stores the state of the cell 
+   - The state is determined through a positive charge or a negative charge
 
 [] Transistor []
    - Guards the current from accessing the capacitor's state
+   - Determines if weather the capacitor can be read or writen at any given time
 
 [] Data Line []
    - Determines wheater a specific cell will recieve a new flow of current or not
@@ -89,14 +91,14 @@ tᵣₚ = Row Precharge Time
 ################# MEMORY OPERATIONS #################
 
 > Programs selects memory location
-> Virtual Address is generated
-> Processor translates Virtual Address into Physical Address via its hardware specific Page tables
+> Processor translates it into Physical Address via its hardware specific Page tables
 > CPU transmists via Address Bus
 > RAM chip corresponding to said address is selected
+> RAM transmits back via data bus
 
 
 [] An  address of 2ᴺ select lines is multiplexed into an address of N address lines
 [] DRAM demultiplexes N address lines and selects the equivalent memory cell via RAS operation
-[] First RAS multiplexes its address and transmits it
-[] Subsequently CAS multiplexes its address and transmits it
+[] First RAS multiplexes its address and transmits it back to CPU
+[] Subsequently CAS multiplexes its address and transmits it back to CPU
 [] CAS data is available after CL cycles
