@@ -1,0 +1,4 @@
+############:: Memory Management Unit (MMU)::##############
+[] Memory Management Unit (MMU) /  Paged Memory Management Unit (PMMU)
+[] Hardware component
+[] Examines memory references on the memory bus and translates requests, from virtual memory addresses into physical addresses located in RAM
