@@ -1,4 +1,10 @@
 ############:: Memory Management Unit (MMU)::##############
 [] Memory Management Unit (MMU) /  Paged Memory Management Unit (PMMU)
 [] Hardware component
+[] Tracks memory use in fixed-size blocks known as pages
 [] Examines memory references on the memory bus and translates requests, from virtual memory addresses into physical addresses located in RAM
+
+
+[] Demand Paging:  If a program refers to a location in a page that is not in physical memory, the MMU will cause an interrupt to the operating system and request the OS to allocate a virtual memory space.
+
+The OS will then select a lesser-used block in , write it to backing storage such as a hard drive if it has been modified since it was read in, read the page from backing storage into that block, and set up the MMU to map the block to the originally requested page so the program can use it. This is known as demand paging.
