@@ -7,4 +7,5 @@
 
 [] Demand Paging:  If a program refers to a location in a page that is not in physical memory, the MMU will cause an interrupt to the operating system and request the OS to allocate a virtual memory space.
 
-The OS will then select a lesser-used block in , write it to backing storage such as a hard drive if it has been modified since it was read in, read the page from backing storage into that block, and set up the MMU to map the block to the originally requested page so the program can use it. This is known as demand paging.
+The OS will then select a lesser-used block in , write it to backing storage such as a hard drive if it has been modified since it was read in, read the page from backing storage into that block, 
+and set up the MMU to map the block to the originally requested page so the program can use it. This is known as demand paging.
