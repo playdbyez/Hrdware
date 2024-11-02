@@ -1,0 +1,9 @@
+Parallel Advanced Technology Attachment [PATA] 
+Integrated Drive ELectronics [IDE] 
+
+[] Replaced by SATA
+[] PATA drive has a pin connector protruding from its edge
+[] Implements Parallel Signaling Technology, where bits are sent through multiple channels simultaneously
+[] Legacy standard used for connecting internal floppys, hard disk drives and optical disk drives to older computer systems
+
+
