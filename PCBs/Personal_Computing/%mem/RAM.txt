@@ -1,3 +1,4 @@
+[] Intel's hyper-threading allows a single processor to run two concurrent executions simultaneously
 
 [] Intel's Common System Interface was developed in to replace the FSB (CSI)
 [] CSI is a Non-Uniform Memory Architecture that consists of attaching local memory to each CPU core internally.
