@@ -1,0 +1,10 @@
+
+[] Intel's Common System Interface was developed in to replace the FSB (CSI)
+[] CSI is a Non-Uniform Memory Architecture that consists of attaching local memory to each CPU core internally.
+   However each memory bank must be accessible to any given core via the interconnects attached to each core which
+   affects the CPU's time/efficiency.
+
+CPU1 accesses memory2 = one interconnects are crossed
+CPU1 accesses memory4 = two interconnects are crossed
+Quad-core CPU = 4 local memory banks
+   
