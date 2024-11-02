@@ -1,0 +1,5 @@
+IEEE 1394 port / Firewire port 
+
+[] 1986
+[] Interface standard for a serial bus sed for real-time video transmissons
+[] Used to connect devices like a stereo or GPS systems within automobiles
