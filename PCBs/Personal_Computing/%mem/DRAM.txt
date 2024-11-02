@@ -1,14 +1,14 @@
 ############[] Dynamic Random Access Memory []###########
 
-[] A DRAM chip is made up of several cells organised in rows and columns.
+[] A DRAM chip is made up of several cells organised in rows and columns
+[] DRAM chips usualy consist of 10⁹ cells
+[] Synchronous DRAM works relative to a clock frequency
 [] Slower and cheaper than SRAM
 [] Small in size and thus easier to pack large ammounts together 
-[] Simpler electric schematic
-[] More power hungry design
-[] Asynchronous DRAM is no longer relevant.
-[] Synchronous DRAM works relative to a clock frequency. 
-[] Said clock frequency determines the speed of the data bus attached to it.
-
+[] Simpler gate schematic but power hungry design
+[] Asynchronous DRAM is no longer relevant
+[] Said clock frequency determines the speed of the data bus attached to it
+[] Different types of RAM require different memory management units
 
 
 
@@ -24,6 +24,8 @@
 [] Capacitor []
    - Stores the state of the cell 
    - The state is determined through a positive charge or a negative charge
+   - Its capacity is low and in the femto-farad range or lower
+   - Its resistance is high and around two tera-ohms
 
 [] Transistor []
    - Guards the current from accessing the capacitor's state
