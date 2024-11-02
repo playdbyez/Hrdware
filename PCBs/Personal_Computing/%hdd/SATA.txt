@@ -1,0 +1,5 @@
+Serial Advanced Technology Attachment  [SATA]
+
+[] It is a protocol
+[] SATA implements Serial Signaling Technology where bits are transmitted one at a time accross a single channel
+[] SATA drive has a card-edge connector protruding from its edge
