@@ -124,6 +124,9 @@ T   T1 or T2
 
 https://www.techtarget.com/searchstorage/definition/RAM-random-access-memory
 
+> DRAM allows the MMu to dictate how much data to transfer (2, 4, 8 words)
+> The MMU specifies how long to keep the row latched while several columns or a single column within said row may be selected
+> Row selection signal has to wair to the t(RP) cycle to complete
 
 
 
