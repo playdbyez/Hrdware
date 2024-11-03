@@ -2,21 +2,21 @@
 
 [] A DRAM chip is made up of several cells organised in rows and columns
 [] DRAM chips usualy consist of 10⁹ cells
-[] Synchronous DRAM works relative to a clock frequency
-[] Slower and cheaper than SRAM
-[] Small in size and thus easier to pack large ammounts together 
-[] Simpler gate schematic but power hungry design
 [] Asynchronous DRAM is no longer relevant
+[] DRAM's transfer rate is 64 bits (8bytes)
+[] Synchronous DRAM works relative to a clock frequency
 [] Said clock frequency determines the speed of the data bus attached to it
-[] Different types of RAM require different memory management units
 
 
 
-
-
-########### SINGLE CELL DRAM SCHEMATIC ##########
+########### DRAM SCHEMATIC (Single Cell)  ##########
 
 <<<-----[ Sense Amplifier ]----------< Data Line >------v Acess Line ^--------| Transistor |------{ Capacitor }
+
+
+[] Slower and cheaper than Static RAM 
+[] Smaller in size and thus easier to pack large ammounts together 
+[] Simpler gate schematic but power hungry design
 
 
 ################ ELECTRICAL COMPONENTS ###############
@@ -43,7 +43,9 @@
    - Feedback to the depleated capacitor requires an new charge to flow.
    
 
-
+C = Capacity
+R = Resistance
+RC = Resistance x Capacity (measured as a unit of time)
 
 
 ################# ELECTRIC OPERATIONS #################
@@ -67,25 +69,39 @@ During this cycle, no access to the cell is possible which compromises time/effi
 
 
 
+##################### DRAM Logic Process #######################
+
+:: Parameters ::
+WE   = Write Enable
+RAS  = Row Address Selection
+CAS  = Column Address Selection
+CL   = CAS Latency
+tᵣ꜀ₔ = RAS-to-CAS delay
+tᵣₚ  = Row Precharge Time       
+tᵣₐₛ = Active to Precharge delay
+T   = Command Rate
+CLK = Clock
+
+[] A DRAM's parameters are to be ploted within a graph against clock as a measure of time
+[] A clock cycle is comprised to two horizontal lines
+[] Within a clock cycle, signals are issued on the rising line of the clock
+
+
+
+[] DRAM uses a special notation to determine the performance of its module
+NOTATION
+w-x-y-z-T
+
+w   CL
+x   t(rcd)
+y   t(rp)
+z   t(RAS)
+T   T1 or T2
 
 
 
 
-##################### INDEX #######################
 
-C = Capacity
-R = Resistance
-RC = Resistance x Capacity
-     measured as a unit of time
-
-RAS = Row Address Selection
-CAS = Column Address Selection
-WE  = Write Enable
-
-RAM modules = Collection of RAM chips
-CL = CAS Latency
-tᵣₚ = Row Precharge Time
-     measured in cycles as a unit of time 
 
 
 
@@ -99,11 +115,21 @@ tᵣₚ = Row Precharge Time
 > RAM transmits back via data bus
 
 
-[] An  address of 2ᴺ select lines is multiplexed into an address of N address lines
-[] DRAM demultiplexes N address lines and selects the equivalent memory cell via RAS operation
+[] An address of 2ᴺ select lines is multiplexed into an address of N address lines
+[] DRAM demultiplexes N address lines and selects the equivalent memory cell 
 [] First RAS multiplexes its address and transmits it back to CPU
 [] Subsequently CAS multiplexes its address and transmits it back to CPU
 [] CAS data is available after CL cycles
 
 
 https://www.techtarget.com/searchstorage/definition/RAM-random-access-memory
+
+
+
+
+
+
+
+######## :: Double Data Rate Dynamic Random Access Memory (DDR DRAM):: #########
+
+[] Double Data Rate DRAM is the successor to Single data Rate DRAM
