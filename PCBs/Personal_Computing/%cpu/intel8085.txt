@@ -1,3 +1,5 @@
 
 
 [] A single quad-core CPU is capable of supporting 16 Virtual Processors
+[] Intel's hyper-threading allows a single processor to run two concurrent executions simultaneously
+[] Symmetric multiprocessing systems (SMP)  are expected to use NUMA
