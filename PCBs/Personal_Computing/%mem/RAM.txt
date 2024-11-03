@@ -1,11 +1,16 @@
-[] Intel's hyper-threading allows a single processor to run two concurrent executions simultaneously
 
-[] Intel's Common System Interface was developed in to replace the FSB (CSI)
-[] CSI is a Non-Uniform Memory Architecture that consists of attaching local memory to each CPU core internally.
-   However each memory bank must be accessible to any given core via the interconnects attached to each core which
-   affects the CPU's time/efficiency.
+###### :: Common System Interface (CSI) :: #######
+[] Developed by Intel to replace the Front Side Bus (FSB) 
+[] CSI is a Non-Uniform Memory Architecture (NUMA) that consists of attaching local memory to each CPU core internally
+[] Each memory bank however must be accessible to any given core via the interconnects attached to each core 
+[] Crossing interconnects directly affects the CPU's time/efficiency
 
-CPU1 accesses memory2 = one interconnects are crossed
-CPU1 accesses memory4 = two interconnects are crossed
 Quad-core CPU = 4 local memory banks
+CPU1 accesses local memory 1 = no interconnects are crossed
+CPU1 accesses remote memory2 = one interconnect is crossed
+CPU1 accesses remote memory4 = two interconnects are crossed
+
+
+
+
    
