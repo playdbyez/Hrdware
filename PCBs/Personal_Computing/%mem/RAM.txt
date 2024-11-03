@@ -1,6 +1,9 @@
 ### RAM Intro ###
 
 [] 1GB of RAM has 2⁸ address lines
+[] A RAM module is a collection of RAM chips
+[] Different types of RAM require different memory management units
+
 
 
 
