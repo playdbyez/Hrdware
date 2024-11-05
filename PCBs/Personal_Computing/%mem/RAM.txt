@@ -4,11 +4,11 @@
 [] A RAM module is a collection of RAM chips
 [] Different types of RAM require different memory management units
 
+[] Single Data Rate RAM transmits one word per clock cycle (2 ticks)
+[] Double Data Rate RAM transmits two words per clock cycle (2 ticks)
 
 
 
 
 
 
-
-   
