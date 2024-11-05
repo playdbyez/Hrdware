@@ -7,6 +7,15 @@
 [] Synchronous DRAM works relative to a clock frequency
 [] Said clock frequency determines the speed of the data bus attached to it
 
+[] DQ pins specify the number of bits processed by the CPU at once in "words"
+[] Word sizes range from 4 to 80 bits 
+[] DRAM implements 64 bit words (8bytes)
+[] DRAM allows the MMU to dictate how much data to transfer (2, 4, 8 words)
+
+[] An address of 2ᴺ select lines is multiplexed into an address of N address lines
+[] DRAM demultiplexes N address lines and selects the equivalent memory cell
+
+[] Dual In-line Memory Model (DIMM)
 
 
 ########### DRAM SCHEMATIC (Single Cell)  ##########
@@ -69,22 +78,69 @@ During this cycle, no access to the cell is possible which compromises time/effi
 
 
 
-##################### DRAM Logic Process #######################
 
-:: Parameters ::
-WE   = Write Enable
-RAS  = Row Address Selection
-CAS  = Column Address Selection
-CL   = CAS Latency
-tᵣ꜀ₔ = RAS-to-CAS delay
-tᵣₚ  = Row Precharge Time       
-tᵣₐₛ = Active to Precharge delay
-T   = Command Rate
+##################### DRAM GATE CONNECTORS #######################
+[] A DRAM's parameters are to be ploted within a Connectors Activity graph, mapped against clock as a measure of time.
+[] A single clock cycle is comprised to two horizontal lines and two vertical lines
+[] Within a clock cycle, signals are issued on the rising line of the clock (middle vertical line)
+
+
+#################### :: Parameters :: ################
+
 CLK = Clock
+[] Time measurement for the occurence of the signals
 
-[] A DRAM's parameters are to be ploted within a graph against clock as a measure of time
-[] A clock cycle is comprised to two horizontal lines
-[] Within a clock cycle, signals are issued on the rising line of the clock
+
+WE   = Write Enable
+[] Allows the current to flow through a row of cells
+
+
+tᵣₚ  = Row Precharge Time 
+[] Used to indicate how many cycles it takes to select a new RAS signal after a previous RAS has been issued
+[] Issued only at the end of the CL cycles
+
+
+RAS  = Row Address Selection
+[] Selects a row of cells based of the demultiplexed address
+[] tᵣₚ cycles always preceed an RAS signal
+
+
+tᵣ꜀ₔ = RAS-to-CAS delay
+[] A delays that must occurr after an RAS signal and a CAS signal
+
+
+CAS  = Column Address Selection
+[] Selects columns of cells within a row
+[] RAS signal always preceeds CAS signals
+
+
+CL   = CAS Latency
+[] A delay that must occur after all CAS signals have been issed for a particular row
+[] CL always preceeds the DQ output
+
+DQ = Output pins
+[] Used for transmiting data input when overwriting cells within the array or data output when reading cells back to the MMU
+
+tᵣₐₛ = Active to Precharge delay
+[] Fixed value that dictates the minimum mmount of cycles that must exist inbetween tᵣₚ signals 
+
+
+Tx   = Command Rate
+[] Used for controlling the frequency of  CAS signals
+[] Tx is a standard, not a signal to be plotted within the grap
+[] x can be either a 1 or a 2 (T1/ T2)
+[] T1 = high-performance Dram module
+[] T2 = 
+
+
+
+
+##########################################################################################################
+
+
+
+
+[[[[ GRAPH ]]]
 
 
 
@@ -106,27 +162,47 @@ T   T1 or T2
 
 
 
+
+
+
+
+
+
+
+
 ################# MEMORY OPERATIONS #################
 
 > Programs selects memory location
-> Processor translates it into Physical Address via its hardware specific Page tables
-> CPU transmists via Address Bus
+> Operating System translates memory location into a virtual address
+> MMU translates it into Physical Address via its hardware specific Page tables
+> MMU transmists via Address Bus
 > RAM chip corresponding to said address is selected
 > RAM transmits back via data bus
 
 
-[] An address of 2ᴺ select lines is multiplexed into an address of N address lines
-[] DRAM demultiplexes N address lines and selects the equivalent memory cell 
+ 
 [] First RAS multiplexes its address and transmits it back to CPU
 [] Subsequently CAS multiplexes its address and transmits it back to CPU
-[] CAS data is available after CL cycles
+
 
 
 https://www.techtarget.com/searchstorage/definition/RAM-random-access-memory
 
-> DRAM allows the MMu to dictate how much data to transfer (2, 4, 8 words)
-> The MMU specifies how long to keep the row latched while several columns or a single column within said row may be selected
-> Row selection signal has to wair to the t(RP) cycle to complete
+
+[] Although there is a minimum time for how long the row must remain latched [t(RAS)]
+   The MMU specifies if the row will be latched for longer depending on how many columns will be fetched within it.
+
+[] t(RP) signal is issue vie WE and RAS being raised simultaneously
+[] RAS signal waits for the completion of t(RP) cycles
+[] At the end of t(RP), RAS signal is issued and the row is latched
+[] CAS signal waits for t(RCD) cycles before fetching one or more columns
+[] At the end of CAS, DQ pins must wait for CL cycles
+[] DQ issues out a word and a new t(RP) signal may be issued simultaneously, but only if t(RAS) cycles have passed
+
+> Ideally several CAS signals should be issued on the same RAS
+> Ideally t(RP) cycles should take as long as the data being sent out by DQ in order to prevent any stall cycles on the next RAS
+
+
 
 
 
