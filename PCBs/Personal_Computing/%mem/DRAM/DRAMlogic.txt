@@ -107,13 +107,18 @@ Tx   = Command Rate
 <+> Ideally t(RP) cycles should take as long as the data being sent out by DQ in order to prevent any stall cycles on the next RAS
 
 
-https://www.techtarget.com/searchstorage/definition/RAM-random-access-memory
+
 
 [[[[ GRAPH ]]]
 
 
 
 
+https://www.techtarget.com/searchstorage/definition/RAM-random-access-memory
+https://www.youtube.com/watch?v=HdqQqefo2lU&t=701s&pp=ygUQcmFtIG11bHRpcGxleGluZw%3D%3D
+https://www.youtube.com/watch?v=7J7X7aZvMXQ&pp=ygUOaG93IGRyYW0gd29ya3M%3D
+https://www.youtube.com/watch?v=I-9XWtdW_Co
+https://www.youtube.com/watch?v=PVad0c2cljo&t=199s&pp=ygUOaG93IGRyYW0gd29ya3M%3D
 
 
 ############ PERFORMANCE METRICS ##############
