@@ -3,6 +3,10 @@
 
 [] CPUs are organized into nodes
 [] A single quad-core CPU is capable of supporting 16 Virtual Processors
+[] Each core has a copy of all hardware resources
+[] Any core is able to work independently of eachother unless they are acessing the same resource
+[] Instruction decoding within a processor can be speed p by caching the decoded instructions
+
 [] Intel's hyper-threading allows a single processor to run two concurrent executions simultaneously
 [] Symmetric multiprocessing systems (SMP)  are expected to use NUMA
 
