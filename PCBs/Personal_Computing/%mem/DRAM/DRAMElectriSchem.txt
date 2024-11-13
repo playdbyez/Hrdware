@@ -5,27 +5,38 @@
 [] Slower and cheaper than Static RAM 
 [] Smaller in size and thus easier to pack large ammounts together 
 [] Simpler gate schematic but power hungry design
+
+
 ################ ELECTRICAL COMPONENTS ###############
+
 [] Capacitor []
    - Stores the state of the cell 
    - The state is determined through a positive charge or a negative charge
    - Its capacity is low and in the femto-farad range or lower
    - Its resistance is high and around two tera-ohms
+
 [] Transistor []
    - Guards the current from accessing the capacitor's state
    - Determines if weather the capacitor can be read or writen at any given time
+
 [] Data Line []
    - Determines wheater a specific cell will recieve a new flow of current or not
+
 [] Acess Line []
    - Acts as a switch for the current to flow in and out
+
 [] Sense Amplifier []
    - Distinguishes between 0 and 1 used to transmit forward 
    - Distinguishes between a new flow or no flow to feedback to the discharged capacitor
    - Feedback to the depleated capacitor requires an new charge to flow.
-   
+
+
+Power = Dynamic Capacity x Voltage² x Frequency
 C = Capacity
 R = Resistance
 RC = Resistance x Capacity (measured as a unit of time)
+
+
 ################# ELECTRIC OPERATIONS #################
 [] Read []
 Access Line is raised
