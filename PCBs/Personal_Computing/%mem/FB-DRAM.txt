@@ -1,1 +1,7 @@
 
+Fully Buffered DRAM (FB-DRAM)
+
+[] Designed for large memory systems such as a data servers
+[] Comprised of several DDR2 or DDR3 chips attached to a serial bus
+[] 69 DQ pins per node
+ 
