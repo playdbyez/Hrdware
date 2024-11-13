@@ -42,12 +42,12 @@
  
 
 
-[] Double-pumped 
+[] Double-pumped bus
    Data is transmitted two times per cycle.
-   Two Data Lines per channel
+   Two Data Lines per array
 
-[] Quad-Pumped
+[] Quad-Pumped bus
    Data is transmitted four times per cycle.
-   Four Data Lines per channel
+   Four Data Lines per array
 
 
