@@ -19,7 +19,7 @@
 
 [] Dual In-line Memory Model (DIMM)
   - Multiple DIMM can be used on a single bus channel
-  - 
+  - The I/O buffer is a component of the DIMM and it holds bits per Data Line
 
 
 
@@ -35,7 +35,6 @@
  
 >> First RAS multiplexes its address and transmits it back to CPU
 >> Subsequently CAS multiplexes its address and transmits it back to CPU
-
 
 
 
@@ -220,9 +219,11 @@ EXAMPLE
 
 ###############################################################################
 
+> von Neumann architecture of personal computers
 
 
-
+> A system without a dedicated Video RAM with two parts, will end up using parts of regular RAM to feed the display
+>> A display of 1024 x 768 with 16bpp at 60Hz will run at a freuquency of 94MB/s when feeding off non-dedicated RAM
 
 
 
@@ -244,26 +245,39 @@ EXAMPLE
 [] Transmits one word per clock cycle
 
 
+array         bus freq.     name rate p/
+freq.         p/channel     full channel model
+
+100Mhz        100MHz         PC100
+
+
+
 
 ######## :: Double Data Rate Dynamic Random Access Memory (DDR DRAM):: #########
 
-[] Double Data Rate DRAM is the successor to Single data Rate DRAM, futhermore DDR modules managed to increase the output of each array of cells without increasing the frequency of which the cells are retrieved.
-   This increase in output is made possible because an I/O buffer component was added to each array's Data Line
+[] Double Data Rate DRAM is the successor to Single data Rate DRAM and it innovates by increasing the throughput.
+   DDR modules managed to increase the output of each array of cells without increasing the frequency of which the cells are retrieved.
+   This was done by increasing the bus frequency but not the frequency of the array, thereby reducing the transfer time of DQ pins without affecting the latency
+   This reduction of the transfer time of the DQ pins is then made possible because an I/O buffer component was added to each array's Data Line.
    An I/O buffer is designed to hold two bits per data line current that flows per clock cycle
 
 [] Each channel supports two parallel data buses (double-pumped)
 [] Each array of cells is attached to two Data Line buses 
 [] Its cell array operates at half the frequency of its external data bus
-[] DQ pins can transmit on the rising and falling vertical lines of the clock and thus two words per clock cycles
+[] DQ pins can transmit on the rising and falling vertical lines of the clock 
+[] Word size of 64 bits per word and a transfer rate of two words per clock cycle 
 [] I/O buffer capacity of 2 bits
-
+[] A DDR memory controller supports 480 pins total, divided between 2 channels with 240 pins per channel
 
 
 
 ######## :: Double Data Rate 2 (DDR2 DRAM):: #########
+[] DDR2 inovates from DDR1 by optimising the bus frequency and increasing the ammount of Data Lines
+[] DDR2 specification allows a maximum of 2 modules per channel and since a DDR memory controller only support 2 channels, a maxmimum of 4 DDR2 modules can be connected to each memory controller/MMU
 [] Each channel supports four parallel data buses (quad-pumped)
+[] Each array then supports 4 Data line buses
 [] 240 DQ pins
-[] Runs at 1.8V
+[] Runs at 1.8V on a quad-pumped bus
 [] I/O buffer capacity of 4 bits
 
 
