@@ -4,7 +4,7 @@
 
  - Lines or cables
  - Transfers information between components
- - Can be double-pumped or quad-pumped
+ - Can support up to a number of data lines per channel/wire
 
 [ ] Address bus:  
     - Uni-directional from CPU to RAM/Cache
@@ -33,7 +33,7 @@
 
 
 [] Frequencies:
-   A quad-pumped 200MHz bus is advertised as a 800MHz bus.
+   A quad-pumped 200MHz bus is advertised through its "Effective frequency" of  800MHz.
 -   800MHz
 -   1066MHz
 -   1333MHz
@@ -41,10 +41,12 @@
  
 
 
-[] Double-pumped
+[] Double-pumped 
    Data is transmitted two times per cycle.
+   Two Data Lines per channel
 
 [] Quad-Pumped
    Data is transmitted four times per cycle.
+   Four Data Lines per channel
 
 
