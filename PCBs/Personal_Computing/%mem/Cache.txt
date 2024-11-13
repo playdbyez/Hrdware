@@ -1,0 +1,15 @@
+### Cache ####
+
+[] Implemented over a Static RAM architecture
+[] Transparently administered by the processor
+[] Holds temporary copies of data from RAM
+[] By default all reads abnd writes are stored in the cache asn an entry
+[] CPUs first search the cache for addresses as accessing the cache takes less clock cycles than accessing RAM
+[] Certain memory regions cannot be cached and separate caches for data and code is the optimal approach
+[] Depending on its implementation, either virual or physical addreses are cached
+[] 1/1000th of the size of memory (System has 4MB cache with 4GB RAM)
+[] L1 cache is denoted as the fastest level
+[] As the levels of cache increase each unit becomes bigger and slower
+
+[] Working Set is the set of data currently worked on
+[] Working set size refers to the total ammount of memory used at one time
