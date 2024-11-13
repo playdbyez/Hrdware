@@ -110,6 +110,7 @@ Tx   = Command Rate
 
 <+> Ideally several CAS signals should be issued on the same RAS
 <+> Ideally t(RP) cycles should take as long as the data being sent out by DQ in order to prevent any stall cycles on the next RAS
+<+> Hardware and software prefetching can be used to reduce stalls
 
 
 
@@ -219,8 +220,7 @@ EXAMPLE
 
 ###############################################################################
 
-[] hardware and software prefetching can be used to reduce stalls
-[] Power = Dynamic Capacity x Voltage² x Frequency
+
 
 
 
@@ -240,6 +240,7 @@ EXAMPLE
 
 ######## :: Single Data Rate Dynamic Random Access Memory (DDR DRAM):: #########
 
+[] Has only one parallel data bus connected to each array of cells (single-pumped)
 [] Transmits one word per clock cycle
 
 
