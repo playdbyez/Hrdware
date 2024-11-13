@@ -2,10 +2,9 @@
 
 [] A DRAM chip is made up of several cells organised in rows and columns
 [] DRAM chips usualy consist of 10⁹ cells
-[] Asynchronous DRAM is no longer relevant
 [] DRAM's transfer rate is 64 bits (8bytes)
 [] Synchronous DRAM works relative to a clock frequency
-[] Said clock frequency determines the speed of the data bus attached to it
+[] Said clock frequency determines the speed of the parallel data bus attached to it
 
 [] DQ pins specify the number of bits processed by the CPU at once in "words"
 [] Word sizes range from 4 to 80 bits 
@@ -15,9 +14,16 @@
 [] An address of 2ᴺ select lines is multiplexed into an address of N address lines
 [] DRAM demultiplexes N address lines and selects the equivalent memory cell
 
+[] Fully duplex parallel bus is expensive
+[] Asynchronous DRAM is no longer relevant
+
 [] Dual In-line Memory Model (DIMM)
+  - Multiple DIMM can be used on a single bus channel
+  - 
 
 
+
+## Operations Overview ##
 > Programs selects memory location
 > Operating System translates memory location into a virtual address
 > MMU translates it into Physical Address via its hardware specific Page tables
@@ -33,7 +39,7 @@
 
 
 
-##################### DRAM GATE CONNECTORS #######################
+##################### [] SDR DRAM GATE CONNECTORS [] #######################
 [] A DRAM's parameters are to be ploted within a Connectors Activity graph, mapped against clock as a measure of time.
 [] A single clock cycle is comprised to two horizontal lines and two vertical lines
 [] Within a clock cycle, signals are issued on the rising line of the clock (middle vertical line)
@@ -52,6 +58,7 @@ WE   = Write Enable
 tᵣₚ  = Row Precharge Time 
 [] Used to indicate how many cycles it takes to select a new RAS signal after a previous RAS has been issued
 [] Issued only at the end of the CL cycles
+[] Can only be re-issued again after t(RAS) cycles
 
 
 RAS  = Row Address Selection
@@ -93,9 +100,7 @@ Tx   = Command Rate
 
 ################# MEMORY OPERATIONS #################
 
-[] Although there is a minimum time for how long the row must remain latched [t(RAS)]
-   The MMU specifies if the row will be latched for longer depending on how many columns will be fetched within it.
-
+[] After considering t(RAS) for the module, the MMU specifies if the row will be latched for longer depending on how many columns will be fetched within it.
 [] t(RP) signal is issue vie WE and RAS being raised simultaneously
 [] RAS signal waits for the completion of t(RP) cycles
 [] At the end of t(RP), RAS signal is issued and the row is latched
@@ -123,7 +128,8 @@ https://www.youtube.com/watch?v=PVad0c2cljo&t=199s&pp=ygUOaG93IGRyYW0gd29ya3M%3D
 
 ############ PERFORMANCE METRICS ##############
 
-[] DRAM uses a special notation to determine the performance of its module based on the graph above
+[] DDR Notation []
+DRAM uses a special notation to determine the performance of its module based on the graph above
 
 NOTATION
 w-x-y-z-T
@@ -134,10 +140,32 @@ y   t(rp)
 z   t(RAS)
 T   T1 or T2
 
+[] The BIOS sets the dafault values for the memory signals bellow within  programmable registers placed inside a RAM module.
+   BIOS may also allow changing some or all of these values depending on the quality of the RAM
+   WARNING: Changing these parameters  may affect the stability of the system
+
+[] The sum pf the ammount of cycles of t(rp), CL and t(RCD) should be bigger or qualto the value for t(RAS) in order to preven a stall of the next t(RP) 
+   (t(RP)+t(RCD)+CL >= t(RAS))
+
+[] The lower the CL the faster the module
+[] Faster buses are superior to faster CL
 
 
 
 
+
+
+###############################
+
+[] Clock ratio []
+Considers the combination of CPU and memory ctonroller frequnecy in order to determine
+how many CPU cycles are stalled per stall cycles occuring in memory
+
+> Quad-pumped intel Core2 Processor (freq. 2.933GHz)
+> FSB/MMU bus (freq. 1.066GHz)
+>> Clock Ratio of 11:1 (11 CPU stalls occur per one memory stall)
+
+#################################################################
 
  [] Burst speed [] 
 Maxmum transfer rate of memory via data bus
@@ -189,8 +217,10 @@ EXAMPLE
 >>> This is deemed unoptimal compared with maximum it could be, determined by the burst speed
 >>>>> Thus the current bus usage is 72% less than the maximum available
 
+###############################################################################
 
-
+[] hardware and software prefetching can be used to reduce stalls
+[] Power = Dynamic Capacity x Voltage² x Frequency
 
 
 
@@ -216,6 +246,35 @@ EXAMPLE
 
 ######## :: Double Data Rate Dynamic Random Access Memory (DDR DRAM):: #########
 
-[] Double Data Rate DRAM is the successor to Single data Rate DRAM
-[] Transmits two words per clock cycle 
+[] Double Data Rate DRAM is the successor to Single data Rate DRAM, futhermore DDR modules managed to increase the output of each array of cells without increasing the frequency of which the cells are retrieved.
+   This increase in output is made possible because an I/O buffer component was added to each array's Data Line
+   An I/O buffer is designed to hold two bits per data line current that flows per clock cycle
+
+[] Each channel supports two parallel data buses (double-pumped)
+[] Each array of cells is attached to two Data Line buses 
+[] Its cell array operates at half the frequency of its external data bus
+[] DQ pins can transmit on the rising and falling vertical lines of the clock and thus two words per clock cycles
+[] I/O buffer capacity of 2 bits
+
+
+
+
+######## :: Double Data Rate 2 (DDR2 DRAM):: #########
+[] Each channel supports four parallel data buses (quad-pumped)
+[] 240 DQ pins
+[] Runs at 1.8V
+[] I/O buffer capacity of 4 bits
+
+
+######## :: Double Data Rate 3 (DDR3 DRAM):: #########
+[] Higher CL than DDR2
+[] Half the Dynamic Capacity of DDR2
+[] Its cell aray operates at a frequency of a quarter of its external bus
+[] Only useful if it operates at a higher frequency than DDR2 since it prioritizes bandwith output over latency
+[] Runs at 1.5V normally
+[] Running at 1.3V it has equal latency to DDR2
+[] Die smaller than DDR2
+[] I/O buffer capacity of 8 bits
+
+
 
