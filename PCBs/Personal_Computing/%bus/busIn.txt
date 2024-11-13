@@ -5,6 +5,7 @@
  - Lines or cables
  - Transfers information between components
  - Can support up to a number of data lines per channel/wire
+ - Can be a parallel bus, serial bus or a differential serial bus
 
 [ ] Address bus:  
     - Uni-directional from CPU to RAM/Cache
