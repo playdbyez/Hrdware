@@ -13,3 +13,11 @@
 
 [] Working Set is the set of data currently worked on
 [] Working set size refers to the total ammount of memory used at one time
+
+
+?? temporal locality
+?? spatial locality
+?? how are cores different from threads ?
+?? cache load and miss
+?? inclusive cache/ exclusive cache ?
+?? fully associative cache ?
