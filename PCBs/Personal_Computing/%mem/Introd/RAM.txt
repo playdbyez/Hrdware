@@ -8,6 +8,9 @@
 [] Double Data Rate RAM transmits two words per clock cycle (2words p/2 ticks)
 [] Quad-pumped bus means 4 data lines per array of memory cells
 
+[] Dual In-line Memory Model (DIMM)
+  - Multiple DIMM can be used on a single bus channel
+  - The I/O buffer is a component of the DIMM and it holds bits per Data Line
 
 
 ## Processing Overview ##
