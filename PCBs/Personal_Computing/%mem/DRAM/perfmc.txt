@@ -1,0 +1,86 @@
+############ PERFORMANCE METRICS ##############
+
+[] DDR Notation []
+DRAM uses a special notation to determine the performance of its module based on the graph above
+
+NOTATION
+w-x-y-z-T
+
+w   CL
+x   t(rcd)
+y   t(rp)
+z   t(RAS)
+T   T1 or T2
+
+[] The BIOS sets the dafault values for the memory signals bellow within "programmable registers" placed inside a RAM module.
+   BIOS may also allow changing some or all of these values depending on the quality of the RAM.
+   WARNING: Changing these parameters may affect the stability of the system.
+
+[] The notation (t(RP)+t(RCD)+CL >= t(RAS)) must be true in order to preven a stall of the next t(RP) 
+
+
+
+
+###############################
+
+[] Clock ratio []
+Considers the combination of CPU and memory ctonroller frequnecy in order to determine
+how many CPU cycles are stalled per stall cycles occuring in memory
+
+> Quad-pumped intel Core2 Processor (freq. 2.933GHz)
+> FSB/MMU bus (freq. 1.066GHz)
+>> Clock Ratio of 11:1 (11 CPU stalls occur per one memory stall)
+
+#################################################################
+
+ [] Burst speed [] 
+Maxmum transfer rate of memory via data bus
+
+FORMULA
+Bus freq(MHz)  x  RAM freq(Bytes) = BURST (GB/s)
+
+EXAMPLE
+> quad-pumped 200MHZ bus
+> 8byte RAM freq
+
+Since this RAM module is capable of filling a bandwith of 8 bytes worth of data transfer
+(200 * 4) * 8
+800 * 8 = 6400
+
+> 6.4 GB/s Burst Speed
+
+
+
+ [] Current DQ frequency [] 
+Distance from one DQ signal before t(RP) to nother DQ signal in cycles
+
+FORMULA 
+2 DQ signals / (cycles distance/100) = Current DQ freq
+
+
+EXAMPLE
+> DQ signal 1 issued at cycle[2]
+> DQ signal 2 issued at cycle[9]
+  >> Distance of 7 cycles
+
+Since DQ was in use in 2 out of 7 cycles
+2/0.07 = 28.5714
+
+> Current frequence of usage is 28.5% out of the total bandwith available
+
+
+ [] Bus Usage []
+How often the data bus is being currently used
+
+FORMULA 
+Curr DQ x Burst Speed = Bus Usage (GB/s)
+
+
+EXAMPLE
+28.5714 * 6400 = 182856.96
+
+>> The current bus usage of the data bus by the memory is of 1.8 GB/s
+>>> This is deemed unoptimal compared with maximum it could be, determined by the burst speed
+>>>>> Thus the current bus usage is 72% less than the maximum available
+
+###############################################################################
