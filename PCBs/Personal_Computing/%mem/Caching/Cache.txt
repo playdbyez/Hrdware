@@ -1,19 +1,76 @@
 ### Cache ####
 
 [] Implemented over a Static RAM architecture
-[] Transparently administered by the processor
+[] Transparently administered by the processor according to the Memory Model Abstraction defined for the processor architecture
 [] Holds temporary copies of data from RAM
-[] By default all reads abnd writes are stored in the cache asn an entry
+[] By default all reads and writes are stored in the cache as an entry
 [] CPUs first search the cache for addresses as accessing the cache takes less clock cycles than accessing RAM
-[] Certain memory regions cannot be cached and separate caches for data and code is the optimal approach
-[] Depending on its implementation, either virual or physical addreses are cached
-[] 1/1000th of the size of memory (System has 4MB cache with 4GB RAM)
-[] L1 cache is denoted as the fastest level
-[] As the levels of cache increase each unit becomes bigger and slower
 
 [] Working Set is the set of data currently worked on
 [] Working set size refers to the total ammount of memory used at one time
+[] Depending on its implementation, either virual or physical addreses are cached
 
+
+[] RAM can be rendered out-of-date if a cache line that has been writen to but it has not writen its data back to RAM (flagged as dirty) 
+[] A dirty cache line is not present in any other processor's cache excet its own
+[] Clean copies of the same cache line can reside within arbitrarily many other caches
+[] A cache cannot store a partial cache line
+
+[] L1 cache is denoted as the fastest level
+[] As the levels of cache increase each unit becomes bigger and slower
+[] Loading new data into cache requires evicting older entries into upper level cache or ultimately evicting it back to RAM
+[] Evicting data is progressively more demanding from cache to cache
+[] Certain memory regions cannot be cached and separate caches for data and code is the optimal approach
+[] It is possible to bypass certain caches
+[] 1/1000th of the size of memory (System has 4MB cache with 4GB RAM)
+[] Processors can take advantage of no bus activity and proactively write dirty lines back to RAM through said buses
+   
+
+[] Abides by the MESI coherence protocol
+[] Cache entries are tagged with the address of a data word store in memory
+[] Each entry consists of lines of several contiguous data words
+[] The length of these lines vary between either 32 or 64 bytes
+[] Once store within a line, a word address is divided into three segments
+[32 bit address]
+    0                       32
+    <---> <-------> <------->
+      O       S         T
+O : Offset : 20%
+S : Cache Set : 40%
+T : Tag    :    40%
+
+
+######:: Access Limitations ::#######
+
+[] Multi-core Processor []
+A processor has an ammount of cores
+Each core has its own L1 cache
+All cores within the processor must share L2 and L3 caches
+Two threads within a single core must share the core's L1 cache
+
+[] Multi-processor System []
+Processors monitor each other's write accesses
+Processor 1 wants to write to a dirty address that is not in memory 
+Processor 2 compares the dirty address to the ones in its local cache in search for a matching address
+Processor 2 invalidates its copy of the matched cache line before transfering its address to Processor 1
+
+( This direct transfer serves as a memory bypass although the memory controller knows of this transfer 
+  because it is responsable for storing the updated cache line content back into RAM )
+
+( A shadow register can be employed in altering the value which is to be stored in the incomplete write operation )
+
+#####:: Levels ::#####
+
+L1i = Level 1 instruction cache
+L1d = Level 1 data cache
+
+L2  = Level 2 cache
+
+L3  = Level 3 cache
+
+RAM
+
+###########
 
 ?? temporal locality
 ?? spatial locality
