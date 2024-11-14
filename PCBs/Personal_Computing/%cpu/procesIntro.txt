@@ -27,3 +27,48 @@ CPU1 accesses local memory 1 = no interconnects are crossed
 CPU1 accesses remote memory2 = one interconnect is crossed
 CPU1 accesses remote memory4 = two interconnects are crossed
 
+#####################
+
+
+https://technobyte.org/buses-8085-demultiplexing-generating-control-signals/
+
+
+Add Bu = one way to I/o devices
+                
+Cont Bu = signals to mem and i/o
+                  read, write, interrupt and reset signal
+
+8085 address bus = 16bit wide
+                                    ranges from 0000H - FFFFH (65536 addresses max)
+                                     it can support 2¹⁶ bytes of memory
+
+intel 8085 (1976 -2000)
+            8bit microprocessor (performs operations 8 bits of data at a time)
+            8bit data bus
+            16bit address bus
+            8085 instruction set
+            40 pin DIP (Dual in-line package)
+
+
+
+
+
+LATEST
+intel core 2006
+400MHZ to 6.2GHz
+L1 chace
+L2 Cache
+L3 Cache
+x86-64 instruction set
+
+
+
+ QuickPath Interconnect replaced the FSB
+ Direct Media Interface replaced the north  and southbridge
+
+Raptor Lake 2022
+intel core i7 13700K
+DDR5 4800 
+192GiB of RAM
+x86 instruction set
+Competes with  AMD's Ryzen 7000
