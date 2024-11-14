@@ -22,7 +22,7 @@
 [] Data Line []
    - Determines wheater a specific cell will recieve a new flow of current or not
 
-[] Acess Line []
+[] Access Line []
    - Acts as a switch for the current to flow in and out
 
 [] Sense Amplifier []
@@ -51,11 +51,13 @@ Data Line drains or charges the Capacitor cell to a new state
 [] Refresh []
 Since a read operation will discharge the Capacitor
 Since due to the resistance on the Capacitor, it may suffer from "leakage" as the charge dissipates from it after some time has passed
-According to the Joint Electron Device Engineering Council  specification (JEDEC) a refresh cycle must be carried out every 64ms to recharge the Capacitor
+According to the Joint Electron Device Engineering Council specification (JEDEC) a refresh cycle must be carried out every 64ms to recharge the Capacitor
+
+Memory controller schedules the frequency of the refresh signals as they can be queued in advance
 A DRAM module keeps track of the last refreshed row via a counter that automatically increases 
 Duration of the refresh cycle depends on the RAM module
 During this cycle, no access to the cell is possible which compromises time/efficiency
-Retrieving a word froma row thaat is currently being refreshed will stall the processor
+Retrieving a word from a row that is currently being refreshed will stall the processor
 
 
-[] Within a clock cycle, signals are issued on the rising line of the clock (middle vertical line)
+
