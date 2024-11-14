@@ -17,29 +17,14 @@
 [] Fully duplex parallel bus is expensive
 [] Asynchronous DRAM is no longer relevant
 
-[] Dual In-line Memory Model (DIMM)
-  - Multiple DIMM can be used on a single bus channel
-  - The I/O buffer is a component of the DIMM and it holds bits per Data Line
 
 
 
-## Operations Overview ##
-> Programs selects memory location
-> Operating System translates memory location into a virtual address
-> MMU translates it into Physical Address via its hardware specific Page tables
-> MMU transmists via Address Bus
-> RAM chip corresponding to said address is selected
-> RAM transmits back via data bus
-
-
- 
->> First RAS multiplexes its address and transmits it back to CPU
->> Subsequently CAS multiplexes its address and transmits it back to CPU
 
 
 
-##################### [] SDR DRAM GATE CONNECTORS [] #######################
-[] A DRAM's parameters are to be ploted within a Connectors Activity graph, mapped against clock as a measure of time.
+##################### [] RAM GATE CONNECTORS [] #######################
+[] A RAM's parameters are to be ploted within a Connectors Activity graph, mapped against clock as a measure of time.
 [] A single clock cycle is comprised to two horizontal lines and two vertical lines
 [] Within a clock cycle, signals are issued on the rising line of the clock (middle vertical line)
 
@@ -110,8 +95,8 @@ Tx   = Command Rate
 <+> Ideally several CAS signals should be issued on the same RAS
 <+> Ideally t(RP) cycles should take as long as the data being sent out by DQ in order to prevent any stall cycles on the next RAS
 <+> Hardware and software prefetching can be used to reduce stalls
-
-
+<+> The lower the CL the faster the module
+<+> Faster buses are superior to faster CL
 
 
 [[[[ GRAPH ]]]
@@ -126,98 +111,7 @@ https://www.youtube.com/watch?v=I-9XWtdW_Co
 https://www.youtube.com/watch?v=PVad0c2cljo&t=199s&pp=ygUOaG93IGRyYW0gd29ya3M%3D
 
 
-############ PERFORMANCE METRICS ##############
 
-[] DDR Notation []
-DRAM uses a special notation to determine the performance of its module based on the graph above
-
-NOTATION
-w-x-y-z-T
-
-w   CL
-x   t(rcd)
-y   t(rp)
-z   t(RAS)
-T   T1 or T2
-
-[] The BIOS sets the dafault values for the memory signals bellow within  programmable registers placed inside a RAM module.
-   BIOS may also allow changing some or all of these values depending on the quality of the RAM
-   WARNING: Changing these parameters  may affect the stability of the system
-
-[] The sum pf the ammount of cycles of t(rp), CL and t(RCD) should be bigger or qualto the value for t(RAS) in order to preven a stall of the next t(RP) 
-   (t(RP)+t(RCD)+CL >= t(RAS))
-
-[] The lower the CL the faster the module
-[] Faster buses are superior to faster CL
-
-
-
-
-
-
-###############################
-
-[] Clock ratio []
-Considers the combination of CPU and memory ctonroller frequnecy in order to determine
-how many CPU cycles are stalled per stall cycles occuring in memory
-
-> Quad-pumped intel Core2 Processor (freq. 2.933GHz)
-> FSB/MMU bus (freq. 1.066GHz)
->> Clock Ratio of 11:1 (11 CPU stalls occur per one memory stall)
-
-#################################################################
-
- [] Burst speed [] 
-Maxmum transfer rate of memory via data bus
-
-FORMULA
-Bus freq(MHz)  x  RAM freq(Bytes) = BURST (GB/s)
-
-EXAMPLE
-> quad-pumped 200MHZ bus
-> 8byte RAM freq
-
-Since this RAM module is capable of filling a bandwith of 8 bytes worth of data transfer
-(200 * 4) * 8
-800 * 8 = 6400
-
-> 6.4 GB/s Burst Speed
-
-
-
- [] Current DQ frequency [] 
-Distance from one DQ signal before t(RP) to nother DQ signal in cycles
-
-FORMULA 
-2 DQ signals / (cycles distance/100) = Current DQ freq
-
-
-EXAMPLE
-> DQ signal 1 issued at cycle[2]
-> DQ signal 2 issued at cycle[9]
-  >> Distance of 7 cycles
-
-Since DQ was in use in 2 out of 7 cycles
-2/0.07 = 28.5714
-
-> Current frequence of usage is 28.5% out of the total bandwith available
-
-
- [] Bus Usage []
-How often the data bus is being currently used
-
-FORMULA 
-Curr DQ x Burst Speed = Bus Usage (GB/s)
-
-
-EXAMPLE
-28.5714 * 6400 = 182856.96
-
->> The current bus usage of the data bus by the memory is of 1.8 GB/s
->>> This is deemed unoptimal compared with maximum it could be, determined by the burst speed
->>>>> Thus the current bus usage is 72% less than the maximum available
-
-###############################################################################
 
 > von Neumann architecture of personal computers
 
@@ -243,53 +137,76 @@ EXAMPLE
 
 [] Has only one parallel data bus connected to each array of cells (single-pumped)
 [] Transmits one word per clock cycle
+[] Word size 64 bits
+[] Data transfer rate is equal to the bus frequency
 
 
-array         bus freq.     name rate p/
-freq.         p/channel     full channel model
 
-100Mhz        100MHz         PC100
+Name                              PC100     
+Array freq. p/data line           100MHz
+Bus freq. p/channel               100MHz
+Data rate                         100MB/s
+
 
 
 
 
 ######## :: Double Data Rate Dynamic Random Access Memory (DDR DRAM):: #########
-
-[] Double Data Rate DRAM is the successor to Single data Rate DRAM and it innovates by increasing the throughput.
+   Double Data Rate DRAM is the successor to Single data Rate DRAM and it innovates by increasing the throughput.
    DDR modules managed to increase the output of each array of cells without increasing the frequency of which the cells are retrieved.
    This was done by increasing the bus frequency but not the frequency of the array, thereby reducing the transfer time of DQ pins without affecting the latency
-   This reduction of the transfer time of the DQ pins is then made possible because an I/O buffer component was added to each array's Data Line.
-   An I/O buffer is designed to hold two bits per data line current that flows per clock cycle
+   This reduction of the transfer time is then made possible because an I/O buffer component was added to each array's Data Line.
+   An I/O buffer is designed to hold an ammount bits per data line current that flows per clock cycle
 
 [] Each channel supports two parallel data buses (double-pumped)
-[] Each array of cells is attached to two Data Line buses 
+[] Each array of cells is attached to two Data Lines (double-pumped)
 [] Its cell array operates at half the frequency of its external data bus
 [] DQ pins can transmit on the rising and falling vertical lines of the clock 
-[] Word size of 64 bits per word and a transfer rate of two words per clock cycle 
+[] Word size 64 bits
+[] Transfers 2 words p/clock cycle 
 [] I/O buffer capacity of 2 bits
-[] A DDR memory controller supports 480 pins total, divided between 2 channels with 240 pins per channel
 
 
 
 ######## :: Double Data Rate 2 (DDR2 DRAM):: #########
-[] DDR2 inovates from DDR1 by optimising the bus frequency and increasing the ammount of Data Lines
-[] DDR2 specification allows a maximum of 2 modules per channel and since a DDR memory controller only support 2 channels, a maxmimum of 4 DDR2 modules can be connected to each memory controller/MMU
-[] Each channel supports four parallel data buses (quad-pumped)
-[] Each array then supports 4 Data line buses
-[] 240 DQ pins
+   DDR2 inovates from DDR1 by optimising the bus frequency and increasing the ammount of Data Lines.
+   DDR2 specification allows a most 2 modules per channel and 4 modules connected to each memory controller/MMU.
+
+[] Each single channel supports four parallel data buses (quad-pumped)
+[] Each array then supports 4 Data lines (quad-pumped)
+[] Word size 64 bits
+[] Transfers 4 words p/clock cycle 
 [] Runs at 1.8V on a quad-pumped bus
 [] I/O buffer capacity of 4 bits
 
 
+Name                              PC2-4200     PC2-5300     PC2-6400     PC2-8000     PC2-8500
+Array freq. p/data line           133MHz       166MHz       200MHz       250MHz       266MHz
+Bus freq. p/channel               266MHz       333MHz       400MHz       500MHz       533MHz
+Data rate                         4,256MB/s    5,312MB/s    6,400MB/s    8,000MB/s    8,512MB/s
+Name rate p/full channel model    DDR2-533     DDR2-667     DDR2-800     DDR2-1000    DDR2-1066
+
+
+
+
+
+
+
 ######## :: Double Data Rate 3 (DDR3 DRAM):: #########
+  Only useful if it operates at a higher frequency than DDR2 since it prioritizes bandwith output over latency
+
+[] Die smaller than DDR2
 [] Higher CL than DDR2
 [] Half the Dynamic Capacity of DDR2
-[] Its cell aray operates at a frequency of a quarter of its external bus
-[] Only useful if it operates at a higher frequency than DDR2 since it prioritizes bandwith output over latency
+[] Its cell array operates at a frequency of a quarter of its external bus 
 [] Runs at 1.5V normally
 [] Running at 1.3V it has equal latency to DDR2
-[] Die smaller than DDR2
 [] I/O buffer capacity of 8 bits
 
 
+Name                              PC3-6400     PC3-8500     PC3-10667    PC3-12800    PC3-14900
+Array freq. p/data line           100MHz       133MHz       166MHz       200MHz       233MHz
+Bus freq. p/channel               400MHz       533MHz       667MHz       800MHz       933MHz
+Data rate                         6,400MB/s    8,512MB/s    10,667MB/s   12,800MB/s   14,993MB/s
+Name rate p/full channel model    DDR3-800     DDR3-1066    DDR3-1333    DDR3-1600    DDR3-1866
 
