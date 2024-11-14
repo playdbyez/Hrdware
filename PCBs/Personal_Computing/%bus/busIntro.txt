@@ -1,16 +1,32 @@
 
 
-#############[] Buses []#############
+#############[] DataBus []#############
 
  - Lines or cables
  - Transfers information between components
  - Can support up to a number of data lines per channel/wire
- - Can be a parallel bus, serial bus or a differential serial bus
+ - Divided into parallel and serial bus / differential serial bus
+ - Wired in a multidrop or daisy chain topology
+
+[] Parallel Bus [] 
+
+
+[] Serial Bus []
+- Allows a single channel to support more modules attached.
+- Its memory controller unit has more channels available.
+- Implemented over daisy-chain or hub topology
+
+
+[] Differential Serial Bus []
+
+
+
 
 [ ] Address bus:  
     - Uni-directional from CPU to RAM/Cache
     - Identifies the address location to read or write operations
     - Dictates the speed of the processor
+ 
 
 
 [ ] Data bus:   
