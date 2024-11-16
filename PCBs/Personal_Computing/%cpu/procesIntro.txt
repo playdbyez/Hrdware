@@ -7,6 +7,7 @@
 [] Any core is able to work independently of eachother unless they are acessing the same resource
 [] Instruction decoding within a processor can be speed up by caching the decoded instructions
 [] Processors use internal pipelines where instructions are decoded for execution or values intended for subsequent registers are loaded from RAM/Cache
+[] PCI-Bridge is part of the processor instead of the Southbridge
 
 [] Intel's hyper-threading allows a single processor to run two concurrent executions simultaneously
 [] Symmetric multiprocessing systems (SMP)  are expected to use NUMA
