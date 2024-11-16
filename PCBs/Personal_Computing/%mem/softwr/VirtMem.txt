@@ -17,3 +17,6 @@
 
 
 ############:: Page Table ::##############
+The process of address translation relies on Page Table trees as a method of organizing it into stages 
+
+https://www.youtube.com/watch?v=QUUdVFZBd5g
