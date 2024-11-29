@@ -5,6 +5,8 @@
 [] A DDR memory controller only supports 2 channels with 240 pins each, totaling at 480 pins
 [] Examines memory references on the memory bus and translates requests, from virtual memory addresses into physical addresses located in RAM
 [] The memory controller unit now part of the memory chip instead of the Northbridge
+[] The memory controller is nowadays a piece of circuitry found inside the processor along with the processor's cores
+[] DRAM allows the MMU to dictate how much data to transfer per cycle (2, 4, 8 words)
 
 
 [] Demand Paging:  If a program refers to a location in a page that is not in physical memory, the MMU will cause an interrupt to the operating system and request the OS to allocate a virtual memory space.
