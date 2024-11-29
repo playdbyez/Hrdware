@@ -1,6 +1,7 @@
 ############[] Dynamic Random Access Memory []###########
 
-[] A DRAM chip is made up of several cells organised in rows and columns
+[] A DRAM chip is made up of several cells organised into arrays of rows and columns
+[] DRAM stores data on 2D arrays
 [] DRAM chips usualy consist of 10⁹ cells
 [] DRAM's transfer rate is 64 bits (8bytes)
 [] Synchronous DRAM works relative to a clock frequency
@@ -9,7 +10,7 @@
 [] DQ pins specify the number of bits processed by the CPU at once in "words"
 [] Word sizes range from 4 to 80 bits 
 [] DRAM implements 64 bit words (8bytes)
-[] DRAM allows the MMU to dictate how much data to transfer (2, 4, 8 words)
+
 
 [] An address of 2ᴺ select lines is multiplexed into an address of N address lines
 [] DRAM demultiplexes N address lines and selects the equivalent memory cell
@@ -18,7 +19,10 @@
 [] Asynchronous DRAM is no longer relevant
 
 
-
+###:: DIMM ::###
+[] A Dual In-line Memory Module is a circuitry board that supports up to eight memory chips attached.
+[] The power supplied to the board is supported by a Power Management Chip attached
+[] Motherboards can support up to 4 DIMM slots
 
 
 
