@@ -1,5 +1,5 @@
 ############:: Memory Management Unit (MMU)::##############
-[] Memory Management Unit (MMU) /  Paged Memory Management Unit (PMMU)
+[] Memory Management Unit (MMU) /  Paged Memory Management Unit (PMMU) / DRAM Interface
 [] Hardware component
 [] Tracks memory use in fixed-size blocks known as pages
 [] A DDR memory controller only supports 2 channels with 240 pins each, totaling at 480 pins
